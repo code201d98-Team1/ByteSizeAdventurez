@@ -1,17 +1,16 @@
-# FinalProject
+# Final Project, Team 1
 
-*Team Members*
+**Team Members**
 
-**Heather Holcomb**
+*Heather Holcomb*
 
-**Kyle White**
+*Kyle White*
 
-**Ike Steoger**
+*Ike Steoger*
 
-**Francisco Sanchez**
+*Francisco Sanchez*
 
-**David Dickens (TBD)**
-
+*David Dickens (TBD)*
 
 ## Group Project: Team Agreement
 
