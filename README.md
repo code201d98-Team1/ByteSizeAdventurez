@@ -1,5 +1,16 @@
 # FinalProject
-Class201d98
+
+*Team Members*
+
+**Heather Holcomb**
+
+**Kyle White**
+
+**Ike Steoger**
+
+**Francisco Sanchez**
+
+**David Dickens (TBD)**
 
 
 ## Group Project: Team Agreement
