@@ -41,7 +41,7 @@ The `firstTime` is the check if this is their first visit, and this would be sto
 
 Below are the screenshots for the wireframe of Byte Size Adventurez:
 
-![WireFrame Screenshot 1](img/WireFrame.png)
+git![WireFrame Screenshot 1](img/WireFrame.png)
 ![WireFrame Screenshot 2](img/WireFrame2.png)
 
 ***
