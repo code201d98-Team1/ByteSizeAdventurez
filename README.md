@@ -37,7 +37,8 @@ The `firstTime` is the check if this is their first visit, and this would be sto
 
 ***
 
-## Project Managment Board
+## Project Management Board
 
-Trello Board with User Stories Link: https://trello.com/invite/b/XPyrgxGS/ATTI889daf6b63ce34727da86aaffcc7f4daE7D2D2FD/byte-size-adventurez-app 
+Trello Board with User Stories: https://trello.com/invite/b/XPyrgxGS/ATTI889daf6b63ce34727da86aaffcc7f4daE7D2D2FD/byte-size-adventurez-app 
+
 
