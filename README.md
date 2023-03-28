@@ -23,6 +23,7 @@
 
 | Version | Updates |
 | ------- | :------ |
+| Version 1.0.2 |   Updated project documentation with software requirements, PM board link, wireframes, and data schema.  | 
 | Version 1.0.1 |   Changed name to Byte Size Adventurez along with Org name. Updated the README to include the about section for the app. Created a development branch and locked down the main branch. | 
 |Version 1.0.0 | Creation of project/app repository and added MD file for team agreement which includes links to all project tools | 
 
