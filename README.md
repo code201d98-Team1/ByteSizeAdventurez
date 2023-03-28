@@ -34,6 +34,14 @@ We are using `localStorage` database.
 
 The `firstTime` is the check if this is their first visit, and this would be stored beyond refresh/close. The `profileList` is a set of objects that hold arrays of data and would be stored beyond refresh/close. The `profile#` increments up one # for each profile and holds user inputted data that is held beyond refresh/close but also holds information on interaction with the website, which would be reset after refresh/close.
 
+***
+
+## WireFrame
+
+Below are the screenshots for the wireframe of Byte Size Adventurez:
+
+![WireFrame Screenshot 1](img/WireFrame.png)
+![WireFrame Screenshot 2](img/WireFrame2.png)
 
 ***
 
@@ -41,3 +49,10 @@ The `firstTime` is the check if this is their first visit, and this would be sto
 
 Trello Board with User Stories Link: https://trello.com/invite/b/XPyrgxGS/ATTI889daf6b63ce34727da86aaffcc7f4daE7D2D2FD/byte-size-adventurez-app 
 
+***
+
+## Domain Model
+
+![Domain Modeling](img/domainmodeling.png)
+
+***
