@@ -10,7 +10,7 @@
 
 ***Nurturing Young Minds***
 Our vision is to create a world where preschoolers develop a lifelong love for learning and a healthy relationship with technology through an engaging and delightful educational app. We strive to introduce young children to STEAM topics in a way that prepares them for school and ignites their curiosity. By providing a safe and captivating online experience, we empower parents with the confidence that their child is benefiting from high-quality, age-appropriate content while giving them the opportunity to enjoy some well-deserved downtime.
-To bring this vision to life, our web app will:
+To bring this vision to life, our web app will: 
 1.	Foster an engaging and immersive learning environment that combines fun and education, sparking the interest and enthusiasm of preschoolers as they explore the world of STEAM.
 2.	Design a user experience tailored to young children, with intuitive navigation, vibrant visuals, and interactive elements that encourage active learning and participation.
 3.	Create a diverse range of content, including games, videos, and activities, that cover essential STEAM topics and develop foundational skills for school readiness.
