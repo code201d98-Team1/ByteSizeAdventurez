@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHYSICS - NEED CREATIVE TITLE</title>
+</head>
+<body style="background-color:white; font-family:verdana;" font-size="15px;" width="600px;" margin="left:auto;"
+    margin="right:auto;">
+    <h1>My Ball Game</h1>
+    <div style="width:500px; margin-left:auto; margin-right:auto; position: relative;">
+        <div id="canvasExplosion" style="position:absolute;">
+            <img src="img/explosion.png" width="60" >
+        </div>
+        <div id="canvasObjectThrown" style="position:absolute;">
+            <img src="img/cute_Cat.png" width="60" style="-webkit-transform: scaleX(-1);transform: scaleX(-1);">
+        </div>
+        <img src="img/castle.jpeg" width="500" height="500" style="position:absolute;">
+        <canvas id="theCanvas" width="500" height="500" style="position:relative;">
+            Canvas not supported; please update your browser.
+        </canvas>
+    </div>
+    <div style="text-align:center">
+        <input type="button" value="Throw!" onclick="throwProjectile();">
+        <p>
+        <input type="range" id="speedSlider" min="0" max="80" step="1" value="30" oninput="showSpeed();"
+            onchange="showSpeed();">
+        Initial speed = <span id="speedReadout">30</span> m/s
+    </p><p>
+            <input type="range" id="angleSlider" min="-90" max="90" step="1" value="10" oninput="showAngle();"
+                onchange="showAngle();">
+            Initial angle = <span id="angleReadout">10</span>&deg;
+        </p><p>
+            <input type="range" id="xSlider" min="0" max="250" step="1" value="10" oninput="showPosition();"
+                onchange="showPosition();">
+            Initial horizontal position = <span id="xReadout">10</span>m
+        </p><p>
+            <input type="range" id="heightSlider" min="0" max="450" step="1" value="300" oninput="showHeight();"
+                onchange="showHeight();">
+            Initial vertical position from top = <span id="heightReadout">300</span>m
+        </p><p>
+            <input type="range" id="gravitySlider" min="-30" max="30" step="0.1" value="9.8" oninput="showGravity();"
+                onchange="showHeight();">
+            Initial vertical position from top = <span id="gravityReadout">9.8</span>m
+            
+    </div>
+    <p>This simulation demonstrates launching a projectile at various speeds and angles.</p>
+
+    
+</body>
+<script src="js/physics.js"></script>
+
+</html>
