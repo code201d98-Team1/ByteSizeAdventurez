@@ -17,7 +17,7 @@
     </nav>
 
     <!--Name Input-->
-    <div>
+    <div id="choiceDisplay">
         <h1>Welcome!</h1>
         <label for="name">Hi! What's your name?</label>
         <input type="text" id="name"><br>
@@ -28,8 +28,8 @@
     <div id="questionBox1" class="questionBox" style="display: none;">
         <h2>Choose an animal!</h2>
         <img src="" alt="lion" onclick="chooseAnimal('lion')">
-        <img src="" alt="monkey" onclick="chooseColor('monkey')">
-        <img src="" alt="crocodile" onclick="chooseColor('crocodile')">
+        <img src="" alt="monkey" onclick="chooseAnimal('monkey')">
+        <img src="" alt="crocodile" onclick="chooseAnimal('crocodile')">
     </div>
     <div id="questionBox2" class="questionBox" style="display: none;">
         <h2>Choose a cool color!</h2>
@@ -51,5 +51,5 @@
     </div>
 
 </body>
-
+<script src="/js/choices.js"></script>
 </html>

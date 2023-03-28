@@ -1,3 +1,5 @@
+'use strict';
+
 // Retrieve image and video player elements
 
 const imageElements = document.querySelectorAll('#image-container img');
