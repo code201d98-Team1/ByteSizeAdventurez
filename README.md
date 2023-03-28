@@ -17,6 +17,13 @@
 
     Although this application is primarily designed to be used with the english language, there is minimal text so that it is possible to be used in any language.
 
+## Database Schema Diagram
+
+![Database Schema Diagram](img/DatabaseSchema.png)
+
+We are using `localStorage` database.
+
+The `firstTime` is the check if this is their first visit, and this would be stored beyond refresh/close. The `profileList` is a set of objects that hold arrays of data and would be stored beyond refresh/close. The `profile#` increments up one # for each profile and holds user inputted data that is held beyond refresh/close but also holds information on interaction with the website, which would be reset after refresh/close.
 
 ### Version 1.0.1
 
