@@ -28,7 +28,10 @@ showHeight();
 showGravity();
 
 
+// function is called in HTML element for the Throw button
 function throwProjectile() {
+  switchCharacter();
+  switchEndEffect()
   canvasExplosion.style = 'position:absolute; z-index: -1;';
   // canvasObjectThrown.style = `position:absolute; z-index: -1;`
   if (timer) {
@@ -56,34 +59,32 @@ function throwProjectile() {
 function drawProjectile() {
   theContext.clearRect(0, 0, theCanvas.width, theCanvas.height);
   theContext.beginPath();
-  theContext.arc(x, y, 15, 0, 2 * Math.PI);
-  theContext.fillStyle = 'rgb(200, 30, 200)';
+  theContext.arc(x, y, 2, 0, 2 * Math.PI);
+  theContext.fillStyle = 'rgb(0,0,0)';
   theContext.fill();
 }
 
 function moveProjectile() {
-  if (y < 500 && x < 490) {
+  if (y < 500 && x < 500) {
     t += dt;
     y_old = y;
     x_old = x;
     x = xo + vx * t;
     y = yo - vy * t + .5 * ay * (t * t); // yo = - .5 * ay * (t * t) + vy * t + y
     drawProjectile();
-    console.log('Y-Position' + y);
+    // console.log('Y-Position' + y);
     if (timer) window.clearTimeout(timer);
     timer = window.setTimeout(moveProjectile, 100 * dt); // The number 100 can be increased for slow motion
     canvasObjectThrown.style = `position:absolute; left: ${x-32}px; top: ${y-40}px; z-index: 1;`;
-    console.log(` X = ${x} \n Y = ${y} \n Xo = ${xo} \n Yo = ${yo} \n X_old = ${x_old} \n Y_old = ${y_old} \n Vx = ${vx} \n Vy = ${vy} \n Gravity = ${ay} \n Time = ${t} \n test =  ${test} `)
+    // console.log(` X = ${x} \n Y = ${y} \n Xo = ${xo} \n Yo = ${yo} \n X_old = ${x_old} \n Y_old = ${y_old} \n Vx = ${vx} \n Vy = ${vy} \n Gravity = ${ay} \n Time = ${t} \n test =  ${test} `)
   } else if (x >= 490) { // RIGHT BORDER
-    console.log('HIT'); // BOTTOM BORDER
+    console.log('HIT');
     canvasObjectThrown.style = 'position:absolute; z-index: -1;';
     canvasExplosion.style = `position:absolute; left: ${x-32}px; top: ${y-40}px; z-index: 1;`;
-  } else if (y >= 500) {
+  } else if (y >= 500) { // BOTTOM BORDER
     console.log('Miss');
   }
 }
-
-
 
 function showSpeed() {
   speedReadout.innerHTML = speedSlider.value;
@@ -100,3 +101,33 @@ function showHeight() {
 function showGravity() {
   gravityReadout.innerHTML = gravitySlider.value;
 }
+
+//END OF PHYSICS FUNCTIONS
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function switchCharacter(){
+  let characterEl = document.getElementById('canvasObjectThrown');
+  characterEl.innerHTML = '';
+  let img = document.createElement('img');
+  let targetElement = document.querySelector('div#my-character-select.icon-select div.icon.selected img');
+  let characterID = parseInt(targetElement.id);
+  console.log(targetElement.id);
+  img.setAttribute('src', `img/icons/${characterID}.png`);
+  img.setAttribute('width', '60');
+  characterEl.appendChild(img);
+
+}
+
+function switchEndEffect(){
+  let endEffectEl = document.getElementById('canvasExplosion');
+  endEffectEl.innerHTML = '';
+  let img = document.createElement('img');
+  let targetElement = document.querySelector('div#my-endEffect-select.icon-select div.icon.selected img');
+  let endEffectID = parseInt(targetElement.id);
+  console.log(targetElement.id);
+  img.setAttribute('src', `img/icons/${endEffectID}.png`);
+  img.setAttribute('width', '60');
+  endEffectEl.appendChild(img);
+}
+
+

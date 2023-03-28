@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/iconselect.css" >
+    <script type="text/javascript" src="lib/control/iconselect.js"></script>
+    <script type="text/javascript" src="lib/iscroll.js"></script>
+    <script src="js/physics_menu.js"></script>
     <title>PHYSICS - NEED CREATIVE TITLE</title>
 </head>
 
@@ -19,35 +23,47 @@
    </header>
     <main>
         <h1 style="text-align:center">My Ball Game</h1>
-        <div style="text-align:center">
-            <label for="character"> Choose a Character: </label>
-            <select name="character" id="character">
-                <option value="cat">Cat</option>
-                <option value="dog">Dog</option>
-                <option value="fish">Fish</option>
-                <option value="ball">Ball</option>
-            </select>
-            <label for="endEffect"> Choose an end effect: </label>
-            <select name="endEffect" id="endEffect">
-                <option value="confetti">Confetti</option>
-                <option value="balloon">Balloons</option>
-                <option value="flower">Flowers</option>
-            </select>
-            <label for="backdrop"> Choose a Backdrop: </label>
-            <select name="backdrop" id="backdrop">
-                <option value="castle">Castle</option>
-                <option value="fairy">Fairy Forest</option>
-                <option value="clouds">Over the Clouds</option>
-            </select>
+        <div>
+            <form action="">
+                <!-- <label for="character"> Choose a Character: </label>
+                <select name="character" id="character">
+                    <option value="cat" >Cat</option>
+                    <option value="fish">Fish</option>
+                    <option value="ball">Ball</option>
+                </select>
+                <label for="endEffect"> Choose an end effect: </label>
+                <select name="endEffect" id="endEffect">
+                    <option value="confetti">Confetti</option>
+                    <option value="balloon">Balloons</option>
+                    <option value="flower">Flowers</option>
+                </select> -->
+                <label for="backdrop"> Choose a Backdrop: </label>
+                <select name="backdrop" id="backdrop" onchange="backDropChange();">
+                    <option value="castle">Castle</option>
+                    <option value="fairyForrest">Fairy Forest</option>
+                    <option value="cloudRainbow">Over the Clouds</option>
+                </select>
+                <div>
+                    <h3>Character</h3>
+                    <div id="my-character-select"></div>
+                </div>
+                <div>
+                    <h3>End-Effect</h3>
+                    <div id="my-endEffect-select"></div>
+                </div>
+                <!-- <input type="button" value="Test" onclick="getEvent();"> -->
+            </form>
         </div>
         <div style="width:500px; margin-left:auto; margin-right:auto; position: relative;">
             <div id="canvasExplosion" style="position:absolute;">
-                <img src="img/explosion.png" width="60">
+                <!-- <img src="img/explosion.png" width="60"> -->
             </div>
             <div id="canvasObjectThrown" style="position:absolute;">
-                <img src="img/cute_Cat.png" width="60" style="-webkit-transform: scaleX(-1);transform: scaleX(-1);">
+                <!-- <img src="img/icons/1.png" width="60" style="-webkit-transform: scaleX(-1);transform: scaleX(-1);"> -->
             </div>
-            <img src="img/castle.jpeg" width="500" height="500" style="position:absolute;">
+            <div id="backdropDiv">
+                <img id="backdropImage" src="img/backdrop/castle.jpg" width="500" height="500" style="position:absolute; z-index: -1;">
+            </div>
             <canvas id="theCanvas" width="500" height="500" style="position:relative;">
                 Canvas not supported; please update your browser.
             </canvas>
