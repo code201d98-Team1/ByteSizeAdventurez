@@ -1,0 +1,19 @@
+/* VIDEO PAGE  */
+
+#image-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    margin: 20px;
+    padding: 40px;
+}
+
+#image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    padding: 40px;
+}
+
