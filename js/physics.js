@@ -10,12 +10,12 @@ let timer, vel, yo, xo, a, angle, vx, vy, x, y, x_old, y_old, ay; // declare all
 let speedSlider = document.getElementById('speedSlider');
 let angleSlider = document.getElementById('angleSlider');
 let heightSlider = document.getElementById('heightSlider');
-let xSlider = document.getElementById('xSlider');
+// let xSlider = document.getElementById('xSlider');
 let gravitySlider = document.getElementById('gravitySlider');
 let speedReadout = document.getElementById('speedReadout');
 let angleReadout = document.getElementById('angleReadout');
 let heightReadout = document.getElementById('heightReadout');
-let xReadout = document.getElementById('xReadout');
+// let xReadout = document.getElementById('xReadout');
 let gravityReadout = document.getElementById('gravityReadout');
 let test = 0;
 
@@ -24,7 +24,7 @@ let test = 0;
 showSpeed();
 showAngle();
 showHeight();
-showPosition();
+// showPosition();
 showGravity();
 
 
@@ -44,7 +44,7 @@ function throwProjectile() {
   a = Number(angleSlider.value);
   angle = a * Math.PI / 180; // convert to radians
   yo = Number(heightSlider.value);
-  xo = Number(xSlider.value);
+  xo = 0;//Number(xSlider.value);
   vx = vel * Math.cos(angle);
   vy = vel * Math.sin(angle);
   console.log('Y-Velocity' + vy);
@@ -73,7 +73,7 @@ function moveProjectile() {
     if (timer) window.clearTimeout(timer);
     timer = window.setTimeout(moveProjectile, 100 * dt); // The number 100 can be increased for slow motion
     canvasObjectThrown.style = `position:absolute; left: ${x-32}px; top: ${y-40}px; z-index: 1;`;
-    console.log(`X = ${x} \n Y = ${y} \n Xo = ${xo} \n Yo = ${yo} \n Vx = ${vx} \n Vy = ${vy} \n Gravity = ${ay} \n Time = ${t} \n test =  ${test} `)
+    console.log(` X = ${x} \n Y = ${y} \n Xo = ${xo} \n Yo = ${yo} \n X_old = ${x_old} \n Y_old = ${y_old} \n Vx = ${vx} \n Vy = ${vy} \n Gravity = ${ay} \n Time = ${t} \n test =  ${test} `)
   } else if (x >= 490) { // RIGHT BORDER
     console.log('HIT'); // BOTTOM BORDER
     canvasObjectThrown.style = 'position:absolute; z-index: -1;';
@@ -94,9 +94,9 @@ function showAngle() {
 function showHeight() {
   heightReadout.innerHTML = heightSlider.value;
 }
-function showPosition() {
-  xReadout.innerHTML = xSlider.value;
-}
+// function showPosition() {
+//   xReadout.innerHTML = xSlider.value;
+// }
 function showGravity() {
   gravityReadout.innerHTML = gravitySlider.value;
 }
