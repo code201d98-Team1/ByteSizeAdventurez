@@ -2,11 +2,13 @@
 
 
 // test array
-const profileArray = [{kidName : 'John', color : 'red', animal : 'Tiger', number: 5, timesVideoWatched : 0, timesPlayedPhysics: 0},{kidName : 'Alice', color : 'blue', animal : 'bear', number: 3, timesVideoWatched : 2, timesPlayedPhysics: 6},{kidName : 'Bob', color : 'green', animal : 'bird', number: 3, timesVideoWatched : 1, timesPlayedPhysics: 36}];
-// const profileArray = JSON.parse(localStorage.getItem(profileArray));
+// const profileArray = [{kidName : 'John', color : 'red', animal : 'Tiger', number: 5, timesVideoWatched : 0, timesPlayedPhysics: 0},{kidName : 'Alice', color : 'blue', animal : 'bear', number: 3, timesVideoWatched : 2, timesPlayedPhysics: 6},{kidName : 'Bob', color : 'green', animal : 'bird', number: 3, timesVideoWatched : 1, timesPlayedPhysics: 36}];
+
+const profileArray = JSON.parse(localStorage.getItem(profileArray));
+const progressChart = document.getElementById('myChart');
+
 console.log(profileArray);
 
-const progressChart = document.getElementById('myChart');
 
 function drawChart(){
   let labels = [];
@@ -17,7 +19,6 @@ function drawChart(){
     timesVideo.push(profile.timesVideoWatched);
     timesPhysics.push(profile.timesPlayedPhysics);
   });
-  console.log(labels, timesVideo, timesPhysics);
   return new Chart(progressChart, {
     type: 'bar',
     data: {
