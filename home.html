@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Byte Size Adventurez Homepage</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
@@ -19,12 +20,12 @@
         </nav>
     </header>
     <main>
+        <section class="home">
         <section>
             <div id="homeDisplay" style="display: none;">
                 <h1>You're Awesome!</h1>
                 <div id="nameDisplay"></div>
                 <div id="choices"></div>
-
             </div>
             <!-- will need to pull chid name via JavaScript? -->
             <p>Hello there, Placeholder!</p>
@@ -32,10 +33,12 @@
             <!-- will need to pull fun facts via JavaScript? -->
             <p>Animal Fun Facts Placeholder</p>
         </section>
-        <section>
-            <a href="physics.html"><img src="" alt=""></a>
-            <a href="videos.html"><img src="" alt=""></a>
+        <section class="home_thumbnails">
+            <a href="physics.html"><img id="img1" src="assets/game_page_img.png" alt=""></a>
+            <a href="videos.html"><img id="img2" src="assets/video_page_img.png" alt=""></a>
         </section>
+        </section>
+
     </main>
 </body>
 <script src="js/masterPageLoad.js"></script>
