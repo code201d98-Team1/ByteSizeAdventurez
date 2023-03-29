@@ -17,30 +17,25 @@ function loadUserProfile() {
 // Get container element from DOM
 const homeDisplay = document.getElementById('homeDisplay');
 const nameDisplay = document.getElementById('nameDisplay');
-const colorDisplay = document.getElementById('colorDisplay');
-const numDisplay = document.getElementById('numDisplay');
-const animalDisplay = document.getElementById('animalDisplay');
-const factDisplay = document.getElementById('factDisplay');
 
 
-// Correlate profile choices with image src paths
+// Map profile choices to image source paths for animals, colors & numbers
 
 function renderAnimalImage(profile) {
-  const animalImage = document.getElementById('animalDisplay');
-  let imageSrc;
+  const animalImage = document.getElementById('animalImage');
+  const animalSrcMap = {
+    jaguar: 'assets/animal2_jaguar.png',
+    monkey: 'assets/animal1_monkey.png',
+    octopus: 'assets/animal3_octopus.png'
+  };
 
-  switch (profile.animal) {
-  case 'jaguar':
-    imageSrc = 'assets/animal2_jaguar.png';
-    break;
-  case 'monkey':
-    imageSrc = 'assets/animal1_monkey.png';
-    break;
-  case 'octopus':
-    imageSrc = 'assets/animal3_octopus.png';
-    break;
-  default:
-    imageSrc = ''; // handle invalid animal choices
+  let imageSrc = '';
+
+  for (const animalName in animalSrcMap) {
+    if (profile.animal === animalName) {
+      imageSrc = animalSrcMap[animalName];
+      break;
+    }
   }
 
   animalImage.src = imageSrc;
@@ -48,20 +43,19 @@ function renderAnimalImage(profile) {
 
 function renderColorImage(profile) {
   const colorImage = document.getElementById('colorImage');
-  let imageSrc;
+  let imageSrc = '';
 
-  switch (profile.color) {
-  case 'purple':
-    imageSrc = 'assets/color3_purple.png';
-    break;
-  case 'blue':
-    imageSrc = 'assets/color2_blue.png';
-    break;
-  case 'green':
-    imageSrc = 'assets/color1_green.png';
-    break;
-  default:
-    imageSrc = ''; // handle invalid color choices
+  const colorOptions = {
+    purple: 'color3_purple.png',
+    blue: 'color2_blue.png',
+    green: 'color1_green.png'
+  };
+
+  for (const [color, filename] of Object.entries(colorOptions)) {
+    if (color === profile.color) {
+      imageSrc = `assets/${filename}`;
+      break;
+    }
   }
 
   colorImage.src = imageSrc;
@@ -69,52 +63,35 @@ function renderColorImage(profile) {
 
 function renderNumberImage(profile) {
   const numberImage = document.getElementById('numberImage');
-  let imageSrc;
+  let imageSrc = '';
 
-  switch (profile.number) {
-  case '1':
-    imageSrc = 'assets/1.png';
-    break;
-  case '2':
-    imageSrc = 'assets/2.png';
-    break;
-  case '3':
-    imageSrc = 'assets/3.png';
-    break;
-  case '4':
-    imageSrc = 'assets/4.png';
-    break;
-  case '5':
-    imageSrc = 'assets/5.png';
-    break;
-  case '6':
-    imageSrc = 'assets/6.png';
-    break;
-  case '7':
-    imageSrc = 'assets/7.png';
-    break;
-  case '8':
-    imageSrc = 'assets/8.png';
-    break;
-  case '9':
-    imageSrc = 'assets/9.png';
-    break;
-  default:
-    imageSrc = ''; // handle invalid number choices
+  const numberOptions = {
+    '1': '1.png',
+    '2': '2.png',
+    '3': '3.png',
+    '4': '4.png',
+    '5': '5.png',
+    '6': '6.png',
+    '7': '7.png',
+    '8': '8.png',
+    '9': '9.png'
+  };
+
+  for (const [number, filename] of Object.entries(numberOptions)) {
+    if (number === profile.number) {
+      imageSrc = `assets/${filename}`;
+      break;
+    }
   }
 
   numberImage.src = imageSrc;
 }
 
 
-// Create new div element
-const profileDiv = document.createElement('div');
-
 // Customize div with profile choices (name, animal, number, animal fact)
 // const profile = loadUserProfile();
 
-// stand in for testing while we get the loadUserProfile() function worked out
-const profile = {
+const profile = {    // stand in for testing while we get the loadUserProfile() function worked out
   kidName: 'John',
   color: 'blue',
   animal: 'monkey',
@@ -122,24 +99,18 @@ const profile = {
 };
 
 if (profile) {
-  homeDisplay.style.display = 'block';
-  nameDisplay.innerHTML = `<p>Hello ${profile.kidName}!</p>`;
-//   colorDisplay.innerHTML = `<p>Color: ${profile.color}</p>`;
-//   numDisplay.innerHTML = `<p>Number: ${profile.number}</p>`;
-//   animalDisplay.innerHTML = `<p>Animal Name: ${profile.animal}</p>`;
-//   factDisplay.innerHTML = `<p>Animal fact for ${profile.animal}</p>`;
-  console.log(profile);
-
+  nameDisplay.innerHTML = `Hello ${profile.kidName}!`;
   renderAnimalImage(profile);
   renderColorImage(profile);
   renderNumberImage(profile);
+  console.log(profile);
 }
 
 
 // set page color based on profile choice
-profileDiv.style.backgroundColor = 'red';
+profileDiv.style.backgroundColor = `${profile.color}`;
 profileDiv.style.padding = '10px';
 
 
 // append div element to container and render
-homeDisplay.appendChild(profileDiv);
+// homeDisplay.appendChild(profileDiv);
