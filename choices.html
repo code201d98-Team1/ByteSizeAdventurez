@@ -13,19 +13,29 @@
     <nav>
         <ul>
             <li><a href="controls.html"></a>Placeholder for lock image</li>
+            <li><a href="profile.html">PROFILE PAGE</a></li>
         </ul>
     </nav>
 
     <!--Name Input-->
     <div id="choiceDisplay">
-        <h1>Welcome!</h1>
-        <label for="name">Hi! What's your name?</label>
-        <input type="text" id="name"><br>
-        <button onclick="startQuestions()">Click Me!</button>
+        <form id="sampleSubmit">
+            <h1>Welcome!</h1>
+            <label for="kidName">Hi! What's your name?</label>
+            <input type="text" id="kidName"><br>
+            <label for="favColor">What is your favorite color?</label>
+            <input type="text" id="favColor"><br>
+            <label for="animal">What is your favorite Animal?</label>
+            <input type="text" id="animal"><br>
+            <label for="favNumber">What is your favorite Number?</label>
+            <input type="number" id="favNumber"><br>
+            <button id="profileSubmit">SUBMIT</button>
+            <!-- <button onclick="startQuestions()">Click Me!</button> -->
+        </form>
     </div>
 
     <!--Question Choice Boxes-->
-    <div id="questionBox1" class="questionBox" style="display: none;">
+    <!-- <div id="questionBox1" class="questionBox" style="display: none;">
         <h2>Choose an animal!</h2>
         <img src="" alt="lion" onclick="chooseAnimal('lion')">
         <img src="" alt="monkey" onclick="chooseAnimal('monkey')">
@@ -48,8 +58,9 @@
         <img src="" alt="7" onclick="chooseNumber('7')">
         <img src="" alt="8" onclick="chooseNumber('8')">
         <img src="" alt="9" onclick="chooseNumber('9')">
-    </div>
+    </div> -->
 
 </body>
-<script src="/js/choices.js"></script>
+<!-- <script src="/js/choices.js"></script> -->
+<script src="js/profile.js"></script>
 </html>
