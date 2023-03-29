@@ -1,4 +1,6 @@
 // Write or Adjust your JavaScript code here.
+'use strict';
+
 let theCanvas = document.getElementById('theCanvas');
 let theContext = theCanvas.getContext('2d');
 let canvasExplosion = document.getElementById('canvasExplosion');

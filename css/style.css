@@ -1,3 +1,4 @@
+
 /* VIDEO PAGE  */
 
 html {
@@ -71,3 +72,136 @@ html {
     max-height: 80%;
   }
   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ABOUT US PAGE */
+
+h4{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.about-us{
+    background-color: lightblue;
+}
+
+.about-us-header {
+    background-color: #243e5a;
+}
+
+.about-us-header div {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.about-us main{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.about-us-section{
+    display: flex;
+    margin-top: 20px;
+}
+
+.about-us-section:last-child{
+    margin-bottom: 15px;
+}
+
+.photo-div{
+    margin-right: 17px;
+    display: inline-block;
+    float: left;
+}
+
+.self-photo{
+    height: 130px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.bio-div{
+    display: inline-block;
+}
+
+.bio-div p{
+    font-size: 14px;
+}
+
+.bios{
+    font-size: 17px;
+}
+
+.email{
+    margin-top: 10px;
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+    color:#243e5a;
+    transition: 350ms all;
+}
+
+.email:hover{
+    color:#243e5a;
+}
+
+.logo{
+    margin-top: 10px;
+    margin-right: 5px;
+}
+
+.mission{
+    display: inline-block;
+    margin-top: 20px;
+}
+
+h3{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+footer>div>img{
+
+}
+
