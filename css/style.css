@@ -67,7 +67,7 @@ h4{
 }
 
 .about-us-section{
-    display: inline-block;
+    display: flex;
     margin-top: 20px;
 }
 
@@ -91,10 +91,42 @@ h4{
     display: inline-block;
 }
 
+.bio-div p{
+    font-size: 14px;
+}
+
 .bios{
     font-size: 17px;
 }
 
+.email{
+    margin-top: 10px;
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+    color:#243e5a;
+    transition: 350ms all;
+}
+
+.email:hover{
+    color:#243e5a;
+}
+
+.logo{
+    margin-top: 10px;
+    margin-right: 5px;
+}
+
+.mission{
+    display: inline-block;
+    margin-top: 20px;
+}
+
 h3{
     font-size: 20px;
+    margin-bottom: 10px;
+}
+
+footer>div>img{
+
 }
