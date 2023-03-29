@@ -185,7 +185,7 @@ function showQuestion(iQ,name) {
           localStorage.setItem('appState', (profileArray.length - 1));
         }else if (index>= 0){
           console.log(profileArray);
-          profileArray[index].times = name;
+          profileArray[index].name = name;
           profileArray[index].color = color;
           profileArray[index].animal = animal;
           profileArray[index].number = number;
