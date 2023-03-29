@@ -17,6 +17,7 @@ function Profiles(kidName, color, animal, number) {
 // function startQuestions() {
 
 
+
 //     kidName = document.getElementById("name").value;
 
 //     document.getElementById("choiceDisplay").style.display = "none";
@@ -85,6 +86,7 @@ function Profiles(kidName, color, animal, number) {
 
 //     // Number Selection
 
+
 //     let numberImg = document.createElement("img");
 //     numberImg.src = number + ".png";
 //     //might need to change the image suffix depending on the image type
@@ -102,6 +104,7 @@ function Profiles(kidName, color, animal, number) {
 
   let profileStringify = JSON.stringify(profile);
   localStorage.setItem(this.name, profileStringify);
+
 
 }
 
