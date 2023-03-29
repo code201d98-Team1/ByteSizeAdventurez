@@ -20,17 +20,33 @@
         </nav>
     </header>
     <main>
+         <!-- Preload images -->
+        <div style="display:none">
+            <img id="jaguar" src="/assets/animal2_jaguar.png">
+            <img id="monkey" src="/assets/animal1_monkey.png">
+            <img id="octopus" src="/assets/animal3_octopus.png">
+            <img id="red" src="/assets/color3_purple.png">
+            <img id="blue" src="/assets/color2_blue.png">
+            <img id="green" src="/assets/color1_green.png">
+            <img id="1" src="/assets/1.png">
+            <img id="2" src="/assets/2.png">
+            <img id="3" src="/assets/3.png">
+            <img id="4" src="/assets/4.png">
+            <img id="5" src="/assets/5.png">
+            <img id="6" src="/assets/6.png">
+            <img id="7" src="/assets/7.png">
+            <img id="8" src="/assets/8.png">
+            <img id="9" src="/assets/9.png">
+        </div>
+        <!-- Customized Section -->
         <section class="home">
         <section>
-            <div id="homeDisplay" style="display: none;">
-                <h1>You're Awesome!</h1>
-                <div id="nameDisplay"></div>
-                <div id="choices"></div>
+            <div id="homeDisplay">
+                <h1 id="nameDisplay"></h1>
+                <img id="animalImage" src="" alt="Animal Image">
+                <img id="colorImage" src="" alt="Color Image">
+                <img id="numberImage" src="" alt="Number Image">
             </div>
-            <!-- will need to pull chid name via JavaScript? -->
-            <p>Hello there, Placeholder!</p>
-            <img href="" alt="">
-            <!-- will need to pull fun facts via JavaScript? -->
             <div id="animal-facts"></div>
         </section>
         <section class="home_thumbnails">
@@ -38,7 +54,6 @@
             <a href="videos.html"><img id="img2" src="assets/video_page_img.png" alt=""></a>
         </section>
         </section>
-
     </main>
     <script src="js/masterPageLoad.js"></script>
     <script src="/js/choices.js"></script>
@@ -46,5 +61,6 @@
 <script src="js/masterPageLoad.js"></script>
 <script src="js/choices.js"></script>
 <script src="js/home-facts.js"></script>
+<script src="js/home.js"></script>
 </html>
 
