@@ -108,9 +108,5 @@ if (profile) {
 
 
 // set page color based on profile choice
-profileDiv.style.backgroundColor = `${profile.color}`;
-profileDiv.style.padding = '10px';
-
-
-// append div element to container and render
-// homeDisplay.appendChild(profileDiv);
+homeDisplay.style.backgroundColor = '${profile.color}';
+homeDisplay.style.padding = '10px';
