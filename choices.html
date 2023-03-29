@@ -35,6 +35,33 @@
         </form>
     </div>
 
+    <h1>What's your name?</h1>
+    <input type="text" id="nameInput">
+    <button onclick="startQuestions()">Submit</button>
+
+    <div id="questions" style="display: none;">
+        <!-- Questions will be generated here -->
+    </div>
+
+    <!-- Preload images -->
+    <div style="display:none">
+        <img id="jaguar" src="images/jaguar.jpg">
+        <img id="monkey" src="images/monkey.jpg">
+        <img id="octopus" src="images/octopus.jpg">
+        <img id="red" src="images/red.jpg">
+        <img id="blue" src="images/blue.jpg">
+        <img id="green" src="images/green.jpg">
+        <img id="1" src="images/1.jpg">
+        <img id="2" src="images/2.jpg">
+        <img id="3" src="images/3.jpg">
+        <img id="4" src="images/4.jpg">
+        <img id="5" src="images/5.jpg">
+        <img id="6" src="images/6.jpg">
+        <img id="7" src="images/7.jpg">
+        <img id="8" src="images/8.jpg">
+        <img id="9" src="images/9.jpg">
+    </div>
+
     <!--Question Choice Boxes-->
     <!-- <div id="questionBox1" class="questionBox" style="display: none;">
         <h2>Choose an animal!</h2>
@@ -61,7 +88,7 @@
         <img src="" alt="9" onclick="chooseNumber('9')">
     </div> -->
 
+    <script src="/js/choices.js"></script>
+    <script src="js/profile.js"></script>
 </body>
-<!-- <script src="/js/choices.js"></script> -->
-<script src="js/profile.js"></script>
 </html>
