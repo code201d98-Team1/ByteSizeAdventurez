@@ -1,7 +1,7 @@
 // creating variables to hold user profiles
 'use strict';
 // const profileArray = JSON.parse(localStorage.getItem('profileArray')) || [];
-// const appState = 'newUser'; //states newUser, prof1, prof2, prof3..etc, parentMenu. These need discussed
+// const appState = 'newUser'; //states newUser, 1, 2, 3..etc, parentMenu. These need discussed
 
 
 //profile construct function
@@ -46,15 +46,15 @@ function captureChoiceSelection(event, appState){
     const profile = new Profiles(kidName, favColor, animal, favNumber);
     profileArray.push(profile);
     console.log(profileArray);
-  } else if (index>= 0){
+  }else if (index>= 0){
     console.log(appState);
     profileArray[index].kidName = kidName;
     profileArray[index].color = favColor;
     profileArray[index].animal = animal;
     profileArray[index].number = favNumber;
   }
-  window.location.assign('home.html');
   let profileArrayString = JSON.stringify(profileArray);
   console.log(profileArrayString);
   localStorage.setItem('profileArray', profileArrayString);
+  // window.location.assign('home.html');
 }
