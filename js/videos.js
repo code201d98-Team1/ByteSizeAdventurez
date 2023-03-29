@@ -1,7 +1,6 @@
 'use strict';
 
 // Load user profile
-loadUserProfile();
 
 function loadUserProfile() {
   const profileArray = JSON.parse(localStorage.getItem('profileArray')) || [];
@@ -12,6 +11,9 @@ function loadUserProfile() {
 
 const profile = loadUserProfile();
 console.log(profile);
+
+loadUserProfile();
+
 
 // Standin while we're debugging loadUserProfile();
 // let profile = { // stand in for testing while we get the loadUserProfile() function worked out
