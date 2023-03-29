@@ -1,3 +1,5 @@
+'use strict';
+
 // Load user profile from storage
 
 function loadUserProfile() {
@@ -91,12 +93,12 @@ function renderNumberImage(profile) {
 // Customize div with profile choices (name, animal, number, animal fact)
 // const profile = loadUserProfile();
 
-const profile = {    // stand in for testing while we get the loadUserProfile() function worked out
-  kidName: 'John',
-  color: 'green',
-  animal: 'monkey',
-  number: '4'
-};
+// const profile = {    // stand in for testing while we get the loadUserProfile() function worked out
+//   kidName: 'John',
+//   color: 'green',
+//   animal: 'monkey',
+//   number: '4'
+// };
 
 if (profile) {
   nameDisplay.innerHTML = `Hello ${profile.kidName}!`;
