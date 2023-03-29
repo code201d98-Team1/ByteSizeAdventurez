@@ -6,15 +6,16 @@ let color;
 let number;
 
 function Profiles(kidName, color, animal, number) {
-    this.kidName = kidName;
-    this.color = color;
-    this.animal = animal;
-    this.number = number;
-    this.timesVideoWatched = 0;
-    this.timesPlayedPhysics = 0;
+  this.kidName = kidName;
+  this.color = color;
+  this.animal = animal;
+  this.number = number;
+  this.timesVideoWatched = 0;
+  this.timesPlayedPhysics = 0;
 }
 
 // function startQuestions() {
+
 
 //     kidName = document.getElementById("name").value;
 
@@ -36,7 +37,9 @@ function Profiles(kidName, color, animal, number) {
 //     document.getElementById("questionBox3").style.display = "block";
 // }
 
+
 // // Choose number and then show choices on Home Page
+
 
 // function chooseNumber(chosenNumber) {
 //     number = chosenNumber;
@@ -93,11 +96,12 @@ function Profiles(kidName, color, animal, number) {
 //     choicesEl.appendChild(numberEl);
 
 
-    let profile = new Profiles(kidName, animal, color, number);
+
+  let profile = new Profiles(kidName, animal, color, number);
 
 
-    let profileStringify = JSON.stringify(profile);
-    localStorage.setItem(this.name, profileStringify);
+  let profileStringify = JSON.stringify(profile);
+  localStorage.setItem(this.name, profileStringify);
 
 }
 
