@@ -1,8 +1,10 @@
 // creating variables to hold user profiles
-
+'use strict';
 const profileArray = JSON.parse(localStorage.getItem('profileArray')) || [];
-const localState = 'new_user'; //states new_user, prof1, prof2, prof3, parent
+const localState = 'newUser'; //states newUser, prof1, prof2, prof3..etc, parentMenu. These need discussed
 
+
+//profile construct function
 function Profiles(kidName, color, animal, number){
   this.kidName = kidName;
   this.color = color;
@@ -10,22 +12,24 @@ function Profiles(kidName, color, animal, number){
   this.number = number;
   this.timesVideoWatched = 0;
   this.timesPlayedPhysics = 0;
-  this.newAccount = true;
 }
 
+//method called when a video is watched
 Profiles.prototype.timesVideoWatched = function() {
   this.timesVideoWatched += 1;
 };
 
+// method called when game is played (maybe every time ball is thrown?)
 Profiles.prototype.timesPlayedPhysics = function() {
   this.timesPlayedPhysics += 1;
 };
 
-
+//CODE BELOW NEEDS REFACTORED FOR FUNCTIONING CHOICE PAGE
 const catalogForm = document.getElementById('sampleSubmit');
-catalogForm.addEventListener('submit', handleSubmit);
+catalogForm.addEventListener('submit', captureChoiceSelection);
 
-function handleSubmit(event){
+
+function captureChoiceSelection(event){
   event.preventDefault();
   const profileArray = JSON.parse(localStorage.getItem('profileArray')) || [];
   console.log(event.target.kidName.value);
