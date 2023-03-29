@@ -56,7 +56,6 @@ function renderColorImage(profile) {
       break;
     }
   }
-  console.log(imageSrc)
   colorImage.src = imageSrc;
 }
 
@@ -104,7 +103,6 @@ if (profile) {
   renderNumberImage(profile);
   console.log(profile);
 }
-
 
 // set page color based on profile choice
 homeDisplay.style.backgroundColor = '${profile.color}';
