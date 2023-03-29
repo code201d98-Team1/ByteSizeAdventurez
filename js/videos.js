@@ -2,17 +2,17 @@
 
 // Load user profile
 
-function loadUserProfile() {
-  const profileArray = JSON.parse(localStorage.getItem('profileArray')) || [];
-  const profile = profileArray[0];
-  console.log(profile);
-  return profile;
-}
+// function loadUserProfile() {
+//   const profileArray = JSON.parse(localStorage.getItem('profileArray')) || [];
+// let appState =  JSON.parse(localStorage.getItem('appState')).toString() || []; // 0 is parting out weird. Zero (0) the number is over written by null, unidentified, and empty array, but string '0' is not.
+// let index;
+// }
 
-const profile = loadUserProfile();
-console.log(profile);
 
-loadUserProfile();
+
+// if(parseInt(appState)>= 0){ // this will turn all number strings to actual number variables. 
+//   index = parseInt(appState); // index should only be created when appState is equal to a profile number, not newUser or parentMenu
+// }
 
 
 // Standin while we're debugging loadUserProfile();
@@ -21,8 +21,26 @@ loadUserProfile();
 //   color: 'green',
 //   animal: 'monkey',
 //   number: '4',
-
+//   timesVideoWatched = 0;
+//   console.log(profile);
 // };
+
+//profile construct function
+function Profiles(kidName, color, animal, number){
+  this.kidName = kidName;
+  this.color = color;
+  this.animal = animal;
+  this.number = number;
+  this.timesVideoWatched = 0;
+  this.timesPlayedPhysics = 0;
+}
+
+//method called when a video is watched
+Profiles.prototype.timesVideoWatched = function() {
+  this.timesVideoWatched += 1;
+};
+
+let profile = new Profiles('John', 'blue', 'jaguar', 7, 0, 0);
 
 // TODO: load customized css based on profile color choice
 
@@ -69,7 +87,7 @@ imageElements.forEach((imageElement) => {
       videoPlayer.src = video.src;
       videoPlayer.play();
       videoPlayerContainer.style.display = 'block';
-      profile.timesVideoWatched += 1;
+      index.timesVideoWatched += 1;
       localStorage.setItem('profileArray', JSON.stringify(profileArray));
     }
   });
