@@ -1,7 +1,7 @@
 // to be merged into home javascript
 
 const animalFacts = document.getElementById('animal-facts');
-let chosenAnimal = 'jaguar';
+let chosenAnimal = 'jaguar'; // needs to pull kid's animal choice
 
 function getRandomNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1) ) + min;
