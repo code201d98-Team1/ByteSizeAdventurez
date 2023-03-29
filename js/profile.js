@@ -1,7 +1,7 @@
 // creating variables to hold user profiles
 'use strict';
-const profileArray = JSON.parse(localStorage.getItem('profileArray')) || [];
-const localState = 'newUser'; //states newUser, prof1, prof2, prof3..etc, parentMenu. These need discussed
+// const profileArray = JSON.parse(localStorage.getItem('profileArray')) || [];
+// const appState = 'newUser'; //states newUser, prof1, prof2, prof3..etc, parentMenu. These need discussed
 
 
 //profile construct function
@@ -29,7 +29,7 @@ const catalogForm = document.getElementById('sampleSubmit');
 catalogForm.addEventListener('submit', captureChoiceSelection);
 
 
-function captureChoiceSelection(event){
+function captureChoiceSelection(event, appState){
   event.preventDefault();
   const profileArray = JSON.parse(localStorage.getItem('profileArray')) || [];
   console.log(event.target.kidName.value);
@@ -41,12 +41,20 @@ function captureChoiceSelection(event){
   let favColor = event.target.favColor.value;
   let animal = event.target.animal.value;
   let favNumber = event.target.favNumber.value;
-
-  const profile = new Profiles(kidName, favColor, animal, favNumber);
-  profileArray.push(profile);
-  console.log(profileArray);
+  let index = parseInt(appState);
+  if(appState === 'newUser'){ // captures new user if appState is new user
+    const profile = new Profiles(kidName, favColor, animal, favNumber);
+    profileArray.push(profile);
+    console.log(profileArray);
+  } else if (index>= 0){
+    console.log(appState);
+    profileArray[index].kidName = kidName;
+    profileArray[index].color = favColor;
+    profileArray[index].animal = animal;
+    profileArray[index].number = favNumber;
+  }
+  window.location.assign('home.html');
   let profileArrayString = JSON.stringify(profileArray);
   console.log(profileArrayString);
   localStorage.setItem('profileArray', profileArrayString);
-
 }
