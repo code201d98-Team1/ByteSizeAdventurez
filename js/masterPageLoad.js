@@ -1,7 +1,7 @@
 //this is a test script to test loading CSS properties
 
 const profileArray = JSON.parse(localStorage.getItem('profileArray')) || [];
-let appState =  JSON.parse(localStorage.getItem('appState')).toString() || []; // 0 is parting out weird. Zero (0) the number is over written by null, unidentified, and empty array, but string '0' is not.
+let appState =  localStorage.getItem('appState') || []; // 0 is parting out weird. Zero (0) the number is over written by null, unidentified, and empty array, but string '0' is not.
 let index;
 
 if(parseInt(appState)>= 0){ // this will turn all number strings to actual number variables. 
