@@ -128,6 +128,7 @@ h4{
 
 .about-us-header {
     background-color: #243e5a;
+    height: 100px;
 }
 
 .about-us-header div {
@@ -156,8 +157,8 @@ h4{
 }
 
 .self-photo{
-    height: 130px;
-    border-radius: 50%;
+    height: 100px;
+    clip-path: circle();
     margin: 0 auto;
 }
 
