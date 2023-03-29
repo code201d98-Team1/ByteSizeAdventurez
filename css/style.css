@@ -1,3 +1,35 @@
+/* HOME PAGE */
+nav {
+    display: inline-flex;
+
+}
+
+.home {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    gap: 50px 100px;
+    padding: 10px;
+    background-color: blue;
+}
+
+.home_thumbnails {
+    background-color: aqua;
+    text-align: center;
+    width: 100%;
+}
+
+#img1 {
+    grid-column-start: 2;
+    width:50%;
+    margin: 20px;
+}
+
+#img2 {
+    grid-column-start: 2;
+    width: 50%
+}
+
 
 /* VIDEO PAGE  */
 
