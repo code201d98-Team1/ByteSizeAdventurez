@@ -93,7 +93,7 @@ function renderNumberImage(profile) {
 
 const profile = {    // stand in for testing while we get the loadUserProfile() function worked out
   kidName: 'John',
-  color: 'blue',
+  color: 'green',
   animal: 'monkey',
   number: '4'
 };
