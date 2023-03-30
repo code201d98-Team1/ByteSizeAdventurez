@@ -27,6 +27,11 @@
              <script>
                 var video = document.getElementById("my-video");
                 video.controlsList = "nodownload"; // disable download button
+                window.addEventListener('load', playVideo);
+                function playVideo() {
+                const videoPlayer = document.querySelector('#video-player');
+                videoPlayer.play();
+                }
               </script>
         </video>
         </div>
