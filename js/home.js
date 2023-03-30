@@ -121,16 +121,25 @@ function getRandomNumber(min, max) {
 let factNumber = getRandomNumber(0, 2);
 
 function randomAnimalFact(){
+  let factElement = document.createElement('span');
+
   if(chosenAnimal === 'monkey'){
     let factsMonkey = ['Monkeys live on the ground and in trees!', 'Most monkeys have tails!', 'Monkeys sleep while sitting in trees, often upright!'];
+    factElement.textContent = factsMonkey[factNumber];
     return(document.createTextNode(factsMonkey[factNumber]));
   } else if (chosenAnimal === 'jaguar'){
     let factsJaguar = ['Jaguars are excellent swimmers!', 'Jaguars will eat ALMOST anything!', 'Jaguars ROAR!!!'];
+    factElement.textContent = factsJaguar[factNumber];
     return(document.createTextNode(factsJaguar[factNumber]));
   } else if (chosenAnimal === 'octopus'){
     let factsOctopus = ['Octopus have 8 long arms!', 'Octopus eat crabs, shrimps, lobsters, and even sharks!', 'Octopus live alone in dens made from rocks, that they move with their powerful arms!'];
+    factElement.textContent = factsOctopus[factNumber];
     return(document.createTextNode(factsOctopus[factNumber]));
   }
+  factElement.style.fontFamily = 'ABeeZee';
+  factElement.style.fontSize = '20px';
+
+  return factElement;
 }
 
 
