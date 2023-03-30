@@ -7,8 +7,9 @@ body {
 }
 
 .container {
-    height: 1000px;
-    width: 750px;
+    /* height: 1000px; */
+    /* width: 750px; */
+    margin: auto;
     
 }
 
@@ -59,6 +60,7 @@ body {
 
 .slideContainer {
     width: 100%;
+    margin: 10px;
 }
 
 .slider {
@@ -102,7 +104,8 @@ body {
 
 .sliderVertical {
     -webkit-appearance: none;
-    margin-top: 200px;
+    margin-top: 00px;
+    width: 500px;
     height: 15px;
     border-radius: 5px;
     background: #d3d3d3;
@@ -139,8 +142,16 @@ body {
     /* position: relative; */
     /* text-align: end; */
     /* width: 20px; */
-    display: flex;
+    position: relative;
+    width: 30px;
 }
+
+.sliderVertical{
+position: absolute;
+left:-250px;
+top: 250px;
+}
+
 
 #heightSlider {
     transform: rotate(90deg);
