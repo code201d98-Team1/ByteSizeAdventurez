@@ -153,10 +153,10 @@ function startQuestions() {
 
   const questionsContainer = document.getElementById('questions');
   questionsContainer.style.display = 'block';
-  showQuestion(currentQuestion, name);
+  showQuestion(currentQuestion);
 }
 
-function showQuestion(iQ,name) {
+function showQuestion(iQ) {
   const question = questions[iQ];
   const container = document.getElementById('questions');
   container.innerHTML = `<h2>${question.title}</h2>`;

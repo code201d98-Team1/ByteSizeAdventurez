@@ -44,7 +44,7 @@ let test = 0;
 // throwProjectile();
 showSpeed();
 showAngle();
-showHeight();
+// showHeight(); DO NOT NEED TO DISPLAY HEIGHT VALUE TO KID
 // showPosition();
 showGravity();
 
@@ -118,9 +118,9 @@ function showSpeed() {
 function showAngle() {
   angleReadout.innerHTML = angleSlider.value;
 }
-function showHeight() {
-  heightReadout.innerHTML = heightSlider.value;
-}
+// function showHeight() {
+//   heightReadout.innerHTML = heightSlider.value;
+// }
 // function showPosition() {
 //   xReadout.innerHTML = xSlider.value;
 // }
