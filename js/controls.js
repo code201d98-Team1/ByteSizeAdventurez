@@ -8,7 +8,6 @@ const progressChart = document.getElementById('myChart');
 const profileArray = JSON.parse(localStorage.getItem('profileArray')) || [];
 console.log(profileArray);
 
-
 function drawChart(){
   let labels = [];
   let timesVideo = [];
@@ -25,14 +24,26 @@ function drawChart(){
       datasets: [{
         label: 'Times Videos Watched',
         data: timesVideo,
-        borderWidth: 1
+        borderWidth: 3,
+        backgroundColor: 'darkred',
       },{
         label: 'Times Physics Game Played',
         data: timesPhysics,
-        borderWidth: 1
+        borderWidth: 3,
+        backgroundColor: 'darkblue',
       }]
     },
     options: {
+      layout: {
+        padding: 60,
+      },
+      plugins: {
+        title: {
+          display: true,
+          text: 'Progress Report',
+        },
+      },
+      borderColor: 'black',
       indexAxis: 'y',
       scales: {
         y: {
@@ -43,9 +54,13 @@ function drawChart(){
   });
 }
 
+Chart.defaults.font.weight = 'bold';
+Chart.defaults.color = 'black';
+Chart.defaults.font.size = 30;
 drawChart();
 
-const resetDataEl = document.getElementById('delete-data');
+
+const resetDataEl = document.getElementById('deleteData');
 resetDataEl.addEventListener('click', clearData);
 
 function clearData(event){
@@ -53,7 +68,7 @@ function clearData(event){
   if (response){
     localStorage.clear();
     alert('Data has been erased!');
-    window.location.replace('splash.html');
+    window.location.replace('index.html');
   }
   else {
     alert('Data was not deleted.');

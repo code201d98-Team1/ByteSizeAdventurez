@@ -1,19 +1,41 @@
 'use strict';
 
-// Load user profile from storage
+//Load user profile updated
+
+function loadAppState() {
+  let appState = parseInt(localStorage.getItem('appState'));
+  return appState;
+}
 
 function loadUserProfile() {
   const profileArray = JSON.parse(localStorage.getItem('profileArray')) || [];
-  const appState = localStorage.getItem('appState');
+  let appState = localStorage.getItem('appState');
   let profile;
-
   if (appState && appState !== 'newUser') {
     const index = parseInt(appState);
     profile = profileArray[index];
   }
-
   return profile;
 }
+
+loadUserProfile();
+loadAppState();
+
+
+// Load user profile from storage
+
+// function loadUserProfile() {
+//   const profileArray = JSON.parse(localStorage.getItem('profileArray')) || [];
+//   const appState = localStorage.getItem('appState');
+//   let profile;
+
+//   if (appState && appState !== 'newUser') {
+//     const index = parseInt(appState);
+//     profile = profileArray[index];
+//   }
+
+//   return profile;
+// }
 
 // Get container element from DOM
 const homeDisplay = document.getElementById('homeDisplay');
@@ -91,12 +113,6 @@ function renderNumberImage(profile) {
 // Customize div with profile choices (name, animal, number, animal fact)
 const profile = loadUserProfile();
 
-// const profile = {    // stand in for testing while we get the loadUserProfile() function worked out
-//   kidName: 'John',
-//   color: 'green',
-//   animal: 'monkey',
-//   number: '4'
-// };
 
 if (profile) {
   nameDisplay.innerHTML = `Hello ${profile.name}!`;
@@ -106,9 +122,7 @@ if (profile) {
   console.log(profile);
 }
 
-// set page color based on profile choice
-homeDisplay.style.backgroundColor = '${profile.color}';
-homeDisplay.style.padding = '10px';
+
 
 // creation of facts for homepage
 const animalFacts = document.getElementById('animal-facts');
@@ -146,6 +160,31 @@ lockEl.onclick = function adultTest(){
     lockEl.href="controls.html";
   }
 };
+
+
+// set background color based on color choice
+
+function setBackground() {
+  loadUserProfile();
+  loadAppState();
+  const bodyElement = document.querySelector('html');
+  if (profile.color === 'blue') {
+    bodyElement.style.backgroundImage = 'url("assets/backgroundBlue.png")';
+  } else if (profile.color === 'green') {
+    bodyElement.style.backgroundImage = 'url("assets/backgroundGreen.png")';
+  } else if (profile.color === 'purple') {
+    bodyElement.style.backgroundImage = 'url("assets/backgroundPurple.png")';
+  } else {
+    bodyElement.style.backgroundColor = 'white';
+  }
+  bodyElement.style.backgroundSize = 'cover';
+  bodyElement.style.backgroundRepeat = 'no-repeat';
+  bodyElement.style.backgroundPosition = 'center center';
+}
+
+window.addEventListener('load', setBackground);
+
+
 
 
 

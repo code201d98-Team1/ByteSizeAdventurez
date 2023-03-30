@@ -121,3 +121,26 @@ closeButton.addEventListener('click', () => {
   videoPlayerContainer.style.display = 'none';
   videoPlayer.pause();
 });
+
+
+
+function setBackground() {
+  loadUserProfile();
+  loadAppState();
+  const bodyElement = document.querySelector('html');
+  if (profile.color === 'blue') {
+    bodyElement.style.backgroundImage = 'url("assets/backgroundBlue.png")';
+  } else if (profile.color === 'green') {
+    bodyElement.style.backgroundImage = 'url("assets/backgroundGreen.png")';
+  } else if (profile.color === 'purple') {
+    bodyElement.style.backgroundImage = 'url("assets/backgroundPurple.png")';
+  } else {
+    bodyElement.style.backgroundColor = 'white';
+  }
+  bodyElement.style.backgroundSize = 'cover';
+  bodyElement.style.backgroundRepeat = 'no-repeat';
+  bodyElement.style.backgroundPosition = 'center center';
+}
+
+window.addEventListener('load', setBackground);
+

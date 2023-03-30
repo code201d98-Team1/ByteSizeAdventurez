@@ -14,47 +14,34 @@
     <title>PHYSICS - NEED CREATIVE TITLE</title>
 </head>
 
-<body style="background-color:white; font-family:verdana;" font-size="15px;" width="600px;" margin="left:auto;"
-    margin="right:auto;">
+
+<body style="font-family:verdana;" font-size="15px;">
+
     <header>
         <nav>
             <a href="home.html"><img src="assets/backbutton.png" alt="back button"></a>
         </nav>
-    </header>
-    <main>
         <h1 style="text-align:center">What is Gravity??</h1>
-        <div>
-            <form action="">
-                <!-- <label for="character"> Choose a Character: </label>
-                <select name="character" id="character">
-                    <option value="cat" >Cat</option>
-                    <option value="fish">Fish</option>
-                    <option value="ball">Ball</option>
-                </select>
-                <label for="endEffect"> Choose an end effect: </label>
-                <select name="endEffect" id="endEffect">
-                    <option value="confetti">Confetti</option>
-                    <option value="balloon">Balloons</option>
-                    <option value="flower">Flowers</option>
-                </select> -->
+    </header>
+    <main class="container">
+        <div class="dropdown">
+            <form>
                 <label for="backdrop"> Choose a Backdrop: </label>
                 <select name="backdrop" id="backdrop" onchange="backDropChange();">
                     <option value="castle">Castle</option>
                     <option value="fairyForrest">Fairy Forest</option>
                     <option value="cloudRainbow">Over the Clouds</option>
                 </select>
-                <div>
-                    <h3>Character</h3>
-                    <div id="my-character-select"></div>
-                </div>
-                <div>
-                    <h3>End-Effect</h3>
-                    <div id="my-endEffect-select"></div>
-                </div>
-                <!-- <input type="button" value="Test" onclick="getEvent();"> -->
             </form>
         </div>
-        <div style="width:500px; margin-left:auto; margin-right:auto; position: relative;">
+        <div class="sliderArea" id="heightSliderDiv">
+            <input class="sliderVertical" type="range" id="heightSlider" min="0" max="450" step="1" value="300">
+            <!-- oninput="showHeight();" onchange="showHeight();" -->
+            <!-- <p> -->
+                <!-- Initial vertical position from top = <span id="heightReadout">300</span>m 
+            </p> -->
+        </div>
+        <div class="throwArea" style="position: relative;">
             <div id="canvasExplosion" style="position:absolute;">
                 <!-- <img src="img/explosion.png" width="60"> -->
             </div>
@@ -62,14 +49,23 @@
                 <!-- <img src="img/icons/1.png" width="60" style="-webkit-transform: scaleX(-1);transform: scaleX(-1);"> -->
             </div>
             <div id="backdropDiv">
-                <img id="backdropImage" src="img/backdrop/castle.jpg" width="500" height="500"
+                <img id="backdropImage" src="img/backdrop/castle.jpg" width="750" height="500"
                     style="position:absolute; z-index: -1;">
             </div>
-            <canvas id="theCanvas" width="500" height="500" style="position:relative;">
+            <canvas id="theCanvas" width="750" height="500" style="position:relative;">
                 Canvas not supported; please update your browser.
             </canvas>
         </div>
-        <div style="text-align:center">
+        <div class="listDrop1">
+            <h3>Character</h3>
+            <div id="my-character-select"></div>
+        </div>
+        <div class="listDrop2">
+            <h3>End-Effect</h3>
+            <div id="my-endEffect-select"></div>
+        </div>
+        
+        <!-- <div style="text-align:center">
             <input type="button" value="Throw!" onclick="throwProjectile();">
             <p>
                 <input type="range" id="speedSlider" min="0" max="80" step="1" value="30" oninput="showSpeed();"
@@ -80,28 +76,52 @@
                 <input type="range" id="angleSlider" min="-90" max="90" step="1" value="10" oninput="showAngle();"
                     onchange="showAngle();">
                 Initial angle = <span id="angleReadout">10</span>&deg;
-            </p>
+            </p> -->
             <!-- <p>
             <input type="range" id="xSlider" min="0" max="250" step="1" value="10" oninput="showPosition();"
                 onchange="showPosition();">
             Initial horizontal position = <span id="xReadout">10</span>m
         </p> -->
-        <p>
+        <!-- <p>
             <input type="range" id="gravitySlider" min="-30" max="30" step="0.1" value="9.8"
             oninput="showGravity();" onchange="showGravity();">
             Gravity = <span id="gravityReadout">9.8</span>m
-        </p>
-        <div id="heightSliderDiv">
-            <input type="range" id="heightSlider" min="0" max="450" step="1" value="300">
-            <!-- oninput="showHeight();" onchange="showHeight();" -->
-            <p>
-                <!-- Initial vertical position from top = <span id="heightReadout">300</span>m -->
-            </p>
+        </p> -->
+
+        <div class="throwButton" style="z-index: 1;">
+            <!-- <button onclick="throwProjectile()">launching</button> -->
+        <!-- <div class="throwButton" style="z-index: 1;"></div> -->
+            <input class="throwButton" type="button" value="Throw!" onclick="throwProjectile();" style="width: 100%; height: 100%;">
         </div>
-            <p>This simulation demonstrates launching a projectile at various speeds and angles.</p>
+        <div class="controlArea">
+            <div style="text-align:center">
+                <div class="slideContainer">
+                    <input class="slider" type="range" id="speedSlider" min="0" max="200" step="1" value="30" oninput="showSpeed();" onchange="showSpeed();">
+                    <p> Initial speed = <span id="speedReadout">30</span> m/s</p>
+                </div>
+                <div class="slideContainer">
+                    <input class="slider" type="range" id="angleSlider" min="-90" max="90" step="1" value="10" oninput="showAngle();" onchange="showAngle();">
+                    <p>Initial angle = <span id="angleReadout">10</span>&deg;</p>
+                </div>
+                <div class="slideContainer">
+                    <input class="slider" type="range" id="gravitySlider" min="-30" max="30" step="0.1" value="9.8" oninput="showGravity();" onchange="showGravity();">
+                    <p>Gravity = <span id="gravityReadout">9.8</span>m</p>
+                </div>
+                <!-- <p>
+                    <input type="range" id="xSlider" min="0" max="250" step="1" value="10" oninput="showPosition();"
+                        onchange="showPosition();">
+                    Initial horizontal position = <span id="xReadout">10</span>m
+                </p> -->
+                
+                <p>This simulation demonstrates launching a projectile at various speeds and angles.</p>
+            </div>
+
         </div>
     </main>
 
+    <footer>
+
+    </footer>
 
 </body>
 <script src="js/physics.js"></script>

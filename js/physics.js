@@ -1,6 +1,26 @@
 // Write or Adjust your JavaScript code here.
 'use strict';
 
+function setBackground() {
+  loadUserProfile();
+  loadAppState();
+  const bodyElement = document.querySelector('html');
+  if (profile.color === 'blue') {
+    bodyElement.style.backgroundImage = 'url("assets/backgroundBlue.png")';
+  } else if (profile.color === 'green') {
+    bodyElement.style.backgroundImage = 'url("assets/backgroundGreen.png")';
+  } else if (profile.color === 'purple') {
+    bodyElement.style.backgroundImage = 'url("assets/backgroundPurple.png")';
+  } else {
+    bodyElement.style.backgroundColor = 'white';
+  }
+  bodyElement.style.backgroundSize = 'cover';
+  bodyElement.style.backgroundRepeat = 'no-repeat';
+  bodyElement.style.backgroundPosition = 'center center';
+}
+
+window.addEventListener('load', setBackground);
+
 function loadAppState() {
   let appState = parseInt(localStorage.getItem('appState'));
   return appState;
@@ -91,7 +111,7 @@ function drawProjectile() {
 }
 
 function moveProjectile() {
-  if (y < 500 && x < 500) {
+  if (y < 488 && x < 735) {
     t += dt;
     y_old = y;
     x_old = x;
@@ -103,11 +123,11 @@ function moveProjectile() {
     timer = window.setTimeout(moveProjectile, 100 * dt); // The number 100 can be increased for slow motion
     canvasObjectThrown.style = `position:absolute; left: ${x-32}px; top: ${y-40}px; z-index: 1;`;
     // console.log(` X = ${x} \n Y = ${y} \n Xo = ${xo} \n Yo = ${yo} \n X_old = ${x_old} \n Y_old = ${y_old} \n Vx = ${vx} \n Vy = ${vy} \n Gravity = ${ay} \n Time = ${t} \n test =  ${test} `)
-  } else if (x >= 490) { // RIGHT BORDER
+  } else if (x >= 735) { // RIGHT BORDER
     console.log('HIT');
     canvasObjectThrown.style = 'position:absolute; z-index: -1;';
     canvasExplosion.style = `position:absolute; left: ${x-32}px; top: ${y-40}px; z-index: 1;`;
-  } else if (y >= 500) { // BOTTOM BORDER
+  } else if (y >= 488) { // BOTTOM BORDER
     console.log('Miss');
   }
 }
