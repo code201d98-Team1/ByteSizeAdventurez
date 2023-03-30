@@ -1,0 +1,65 @@
+/* HOME PAGE */
+
+body {
+    background-color: none;
+}
+
+nav {
+    display: inline-flex;
+
+}
+
+.home {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    gap: 50px 100px; */
+    padding: 10px;
+}
+
+#homeDisplay {
+    width: 100%;
+    display: grid;
+    padding: 10px;
+}
+
+#homeDisplay img {
+    height: 150px;
+    padding: 10px;
+}
+
+#nameDisplay {
+    color: white;
+    padding: 10px;
+    font-family: 'ABeeZee', sans-serif;
+}
+
+#animal-facts {
+    background-color: white;
+    text-align: center;
+}
+
+.home_thumbnails {
+    /* background-color: lightblue; */
+    display: grid;
+    row-gap: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+
+#img1 {
+    background-color: white;
+    width: 30%;
+    margin: 20px;
+    padding: 40px;
+}
+
+#img2 {
+    background-color: white;
+    width: 30%;
+    margin: 20px;
+    padding: 40px;
+}
