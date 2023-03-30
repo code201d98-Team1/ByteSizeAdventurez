@@ -1,39 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Parental Controls</title>
-        <link rel="stylesheet" href="css/reset.css">
-        <link rel="stylesheet" href="css/controls.css">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parental Controls</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/controls.css">
 </head>
+
 <body class="controls-body">
     <header>
         <nav>
             <section>
                 <a href="home.html"><img src="assets/homebutton.png" alt="go to home page"></a>
             </section>
+            <h2>Parental Controls</h2>
         </nav>
     </header>
     <main>
-        <section>
-            <h2>Parental Controls</h2>
-            <a href="profile.html" class="text-box">
-                <button class="btn btn-white btn-animate">Change User</button>
+        <section class="text-box">
+            <a href="profile.html" class="btn btn-white btn-animate">Click To Change Profile</a>
             </a>
-            <section id="deleteData" >
-            <label for="delete-data" class="text-box"></label>
-                <input type="button" id="delete-data" class="btn btn-white btn-animate" value="Clear All Data">
-            </section>
+            <div id="deleteData">
+                <!-- <label for="delete-data"></label> -->
+                <button type="button" id="delete-data" class="btn btn-white btn-animate"
+                    value="Clear All Data">Clear All Data</button>
+            </div>
         </section>
-        <section>
-            <section>
-                <canvas id="myChart"></canvas>
-            </section>
-        </section>
+        <div class="chart-container">
+            <canvas id="myChart"></canvas>
+        </div>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="js/controls.js"></script>
 </body>
+
 </html>

@@ -60,7 +60,7 @@ Chart.defaults.font.size = 30;
 drawChart();
 
 
-const resetDataEl = document.getElementById('delete-data');
+const resetDataEl = document.getElementById('deleteData');
 resetDataEl.addEventListener('click', clearData);
 
 function clearData(event){
