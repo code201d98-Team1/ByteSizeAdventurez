@@ -135,3 +135,18 @@ function randomAnimalFact(){
 
 
 animalFacts.appendChild(randomAnimalFact());
+
+let lockEl = document.getElementById('parent-controls');
+let randomNumber1 = getRandomNumber(1, 9);
+let randomNumber2 = getRandomNumber(1, 9);
+
+lockEl.onclick = function adultTest(){
+  let answer = prompt("Please add " + randomNumber1 + " to " + randomNumber2 + ".");
+  if(answer == randomNumber1 + randomNumber2){
+    lockEl.href="controls.html";
+  }
+};
+
+
+
+
