@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/home.html">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--Page 3, Kid Choice-->
+    <nav>
+        <ul>
+            <li><a href="controls.html"></a>Placeholder for lock image</li>
+            <!-- <li><a href="profile.html">PROFILE PAGE</a></li> -->
+        </ul>
+    </nav>
+
+    <!--Name Input-->
+    <!-- <div id="choiceDisplay">
+        <form id="sampleSubmit">
+            <h1>Welcome!</h1>
+            <label for="kidName">Hi! What's your name?</label>
+            <input type="text" id="kidName"><br>
+            <label for="favColor">What is your favorite color?</label>
+            <input type="text" id="favColor"><br>
+            <label for="animal">What is your favorite Animal?</label>
+            <input type="text" id="animal"><br>
+            <label for="favNumber">What is your favorite Number?</label>
+            <input type="number" id="favNumber"><br>Í
+            <button id="profileSubmit">SUBMIT</button>
+             <button onclick="startQuestions()">Click Me!</button>
+        </form>
+    </div> -->
+
+
+    <h1>What's your name?</h1>
+    <input type="text" id="nameInput">
+    <button onclick="startQuestions()">Submit</button>
+
+    <div id="questions" style="display: none;">
+        <!-- Questions will be generated here -->
+    </div>
+
+    <!-- Preload images -->
+    <div style="display:none">
+        <img id="jaguar" src="/assets/animal2_jaguar.png">
+        <img id="monkey" src="/assets/animal1_monkey.png">
+        <img id="octopus" src="/assets/animal3_octopus.png">
+        <img id="purple" src="/assets/color3_purple.png">
+        <img id="blue" src="/assets/color2_blue.png">
+        <img id="green" src="/assets/color1_green.png">
+        <img id="1" src="/assets/1.png">
+        <img id="2" src="/assets/2.png">
+        <img id="3" src="/assets/3.png">
+        <img id="4" src="/assets/4.png">
+        <img id="5" src="/assets/5.png">
+        <img id="6" src="/assets/6.png">
+        <img id="7" src="/assets/7.png">
+        <img id="8" src="/assets/8.png">
+        <img id="9" src="/assets/9.png">
+    </div>
+
+    <!--Question Choice Boxes-->
+    <!-- <div id="questionBox1" class="questionBox" style="display: none;">
+        <h2>Choose an animal!</h2>
+        <img src="" alt="lion" onclick="chooseAnimal('lion')">
+        <img src="" alt="monkey" onclick="chooseAnimal('monkey')">
+        <img src="" alt="crocodile" onclick="chooseAnimal('crocodile')">
+    </div>
+    <div id="questionBox2" class="questionBox" style="display: none;">
+        <h2>Choose a cool color!</h2>
+        <img src="" alt="green" onclick="chooseColor('green')">
+        <img src="" alt="blue" onclick="chooseColor('blue')">
+        <img src="" alt="purple" onclick="chooseColor('purple')">
+    </div>
+    <div id="questionBox3" class="questionBox" style="display: none;">
+        <h2>Choose your favorite number!</h2>
+        <img src="" alt="1" onclick="chooseNumber('1')">
+        <img src="" alt="2" onclick="chooseNumber('2')">
+        <img src="" alt="3" onclick="chooseNumber('3')">
+        <img src="" alt="4" onclick="chooseNumber('4')">
+        <img src="" alt="5" onclick="chooseNumber('5')">
+        <img src="" alt="6" onclick="chooseNumber('6')">
+        <img src="" alt="7" onclick="chooseNumber('7')">
+        <img src="" alt="8" onclick="chooseNumber('8')">
+        <img src="" alt="9" onclick="chooseNumber('9')">
+    </div> -->
+
+    <script src="js/masterPageLoad.js"></script>
+    <script src="/js/choices.js"></script>
+    <!-- <script src="js/profile.js"></script> -->
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/iconselect.css" >
+    <script type="text/javascript" src="lib/control/iconselect.js"></script>
+    <script type="text/javascript" src="lib/iscroll.js"></script>
+    <script src="js/physics_menu.js"></script>
+    <title>PHYSICS - NEED CREATIVE TITLE</title>
+</head>
+
+<body style="background-color:white; font-family:verdana;" font-size="15px;" width="600px;" margin="left:auto;"
+    margin="right:auto;">
+   <header>
+    <nav>
+        <a href="home.html"><img src="assets/backbutton.png" alt="back button"></a>
+    </nav>
+   </header>
+    <main>
+        <h1 style="text-align:center">My Ball Game</h1>
+        <div>
+            <form action="">
+                <!-- <label for="character"> Choose a Character: </label>
+                <select name="character" id="character">
+                    <option value="cat" >Cat</option>
+                    <option value="fish">Fish</option>
+                    <option value="ball">Ball</option>
+                </select>
+                <label for="endEffect"> Choose an end effect: </label>
+                <select name="endEffect" id="endEffect">
+                    <option value="confetti">Confetti</option>
+                    <option value="balloon">Balloons</option>
+                    <option value="flower">Flowers</option>
+                </select> -->
+                <label for="backdrop"> Choose a Backdrop: </label>
+                <select name="backdrop" id="backdrop" onchange="backDropChange();">
+                    <option value="castle">Castle</option>
+                    <option value="fairyForrest">Fairy Forest</option>
+                    <option value="cloudRainbow">Over the Clouds</option>
+                </select>
+                <div>
+                    <h3>Character</h3>
+                    <div id="my-character-select"></div>
+                </div>
+                <div>
+                    <h3>End-Effect</h3>
+                    <div id="my-endEffect-select"></div>
+                </div>
+                <!-- <input type="button" value="Test" onclick="getEvent();"> -->
+            </form>
+        </div>
+        <div style="width:500px; margin-left:auto; margin-right:auto; position: relative;">
+            <div id="canvasExplosion" style="position:absolute;">
+                <!-- <img src="img/explosion.png" width="60"> -->
+            </div>
+            <div id="canvasObjectThrown" style="position:absolute;">
+                <!-- <img src="img/icons/1.png" width="60" style="-webkit-transform: scaleX(-1);transform: scaleX(-1);"> -->
+            </div>
+            <div id="backdropDiv">
+                <img id="backdropImage" src="img/backdrop/castle.jpg" width="500" height="500" style="position:absolute; z-index: -1;">
+            </div>
+            <canvas id="theCanvas" width="500" height="500" style="position:relative;">
+                Canvas not supported; please update your browser.
+            </canvas>
+        </div>
+        <div style="text-align:center">
+            <input type="button" value="Throw!" onclick="throwProjectile();">
+            <p>
+                <input type="range" id="speedSlider" min="0" max="80" step="1" value="30" oninput="showSpeed();"
+                    onchange="showSpeed();">
+                Initial speed = <span id="speedReadout">30</span> m/s
+            </p>
+            <p>
+                <input type="range" id="angleSlider" min="-90" max="90" step="1" value="10" oninput="showAngle();"
+                    onchange="showAngle();">
+                Initial angle = <span id="angleReadout">10</span>&deg;
+            </p>
+            <!-- <p>
+            <input type="range" id="xSlider" min="0" max="250" step="1" value="10" oninput="showPosition();"
+                onchange="showPosition();">
+            Initial horizontal position = <span id="xReadout">10</span>m
+        </p> -->
+            <p>
+                <input type="range" id="heightSlider" min="0" max="450" step="1" value="300" oninput="showHeight();"
+                    onchange="showHeight();">
+                Initial vertical position from top = <span id="heightReadout">300</span>m
+            </p>
+            <p>
+                <input type="range" id="gravitySlider" min="-30" max="30" step="0.1" value="9.8"
+                    oninput="showGravity();" onchange="showHeight();">
+                Gravity = <span id="gravityReadout">9.8</span>m
+            </p>
+            <p>This simulation demonstrates launching a projectile at various speeds and angles.</p>
+        </div>
+    </main>
+
+
+</body>
+<script src="js/physics.js"></script>
+</html>
