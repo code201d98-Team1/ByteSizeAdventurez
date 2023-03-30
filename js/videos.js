@@ -2,45 +2,35 @@
 
 // Load user profile
 
-// function loadUserProfile() {
-//   const profileArray = JSON.parse(localStorage.getItem('profileArray')) || [];
-// let appState =  JSON.parse(localStorage.getItem('appState')).toString() || []; // 0 is parting out weird. Zero (0) the number is over written by null, unidentified, and empty array, but string '0' is not.
-// let index;
+const loadProfileArray = JSON.parse(localStorage.getItem('profileArray'));
+
+const profile = loadProfileArray[0];
+
+console.log('Name:', profile.kidName);
+console.log('Color:', profile.color);
+console.log('Animal:', profile.animal);
+console.log('Number:', profile.number);
+console.log('Video:', profile.timesVideoWatched);
+console.log('Game:', profile.timesPlayedPhysics);
+
+
+
+// //profile construct function
+// function Profiles(kidName, color, animal, number){
+//   this.kidName = kidName;
+//   this.color = color;
+//   this.animal = animal;
+//   this.number = number;
+//   this.timesVideoWatched = 0;
+//   this.timesPlayedPhysics = 0;
 // }
 
-
-
-// if(parseInt(appState)>= 0){ // this will turn all number strings to actual number variables. 
-//   index = parseInt(appState); // index should only be created when appState is equal to a profile number, not newUser or parentMenu
-// }
-
-
-// Standin while we're debugging loadUserProfile();
-// let profile = { // stand in for testing while we get the loadUserProfile() function worked out
-//   kidName: 'John',
-//   color: 'green',
-//   animal: 'monkey',
-//   number: '4',
-//   timesVideoWatched = 0;
-//   console.log(profile);
+// //method called when a video is watched
+// Profiles.prototype.timesVideoWatched = function() {
+//   this.timesVideoWatched += 1;
 // };
 
-//profile construct function
-function Profiles(kidName, color, animal, number){
-  this.kidName = kidName;
-  this.color = color;
-  this.animal = animal;
-  this.number = number;
-  this.timesVideoWatched = 0;
-  this.timesPlayedPhysics = 0;
-}
-
-//method called when a video is watched
-Profiles.prototype.timesVideoWatched = function() {
-  this.timesVideoWatched += 1;
-};
-
-let profile = new Profiles('John', 'blue', 'jaguar', 7, 0, 0);
+// let profile = new Profiles('John', 'blue', 'jaguar', 7, 0, 0);
 
 // TODO: load customized css based on profile color choice
 
@@ -87,8 +77,9 @@ imageElements.forEach((imageElement) => {
       videoPlayer.src = video.src;
       videoPlayer.play();
       videoPlayerContainer.style.display = 'block';
-      index.timesVideoWatched += 1;
-      localStorage.setItem('profileArray', JSON.stringify(profileArray));
+      profile.timesVideoWatched += 1;
+      // localStorage.setItem('profileArray', JSON.stringify(profileArray));
+      console.log(profile);
     }
   });
 });
