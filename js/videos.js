@@ -21,12 +21,12 @@ function loadUserProfile() {
 const profile = loadUserProfile();
 const index = loadAppState();
 
-console.log('Name:', profile.kidName);
-console.log('Color:', profile.color);
-console.log('Animal:', profile.animal);
-console.log('Number:', profile.number);
-console.log('Video:', profile.timesVideoWatched);
-console.log('Game:', profile.timesPlayedPhysics);
+// console.log('Name:', profile.kidName);
+// console.log('Color:', profile.color);
+// console.log('Animal:', profile.animal);
+// console.log('Number:', profile.number);
+// console.log('Video:', profile.timesVideoWatched);
+// console.log('Game:', profile.timesPlayedPhysics);
 
 
 
