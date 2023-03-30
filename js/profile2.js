@@ -27,15 +27,24 @@ function handleProfileSelection(e){
 //   console.log(e.target.innerHTML);
 ////////////CODE IS SUPPOSE TO IDENTIFY WHAT h2 WAS CLICKED, THEN PARSE THROUGH THE PROFILEARRAY FOR INDEX OF NAME
   let name = e.target.innerHTML;
-  let profileIndex = profileArray.findIndex(x => x.name ===name);
+  let outEvent = e;
+  console.log(outEvent);
+  // debugger;
+  let profileIndex = parseInt(outEvent.srcElement.parentElement.id);//profileArray.findIndex(x => x.name ===name);
   console.log(profileIndex);
-//   debugger;
+  debugger;
 
   //// this if statement prevents an invalide profileIndex to be entered. invalid profiles occurs when you do not click on the h2 element, but around it.
   if(profileIndex !== -1){
-    // debugger;Í
+    debugger;
     localStorage.setItem('appState', profileIndex);
     window.location.assign('home.html');
   }
 }
 
+newProfileButton.addEventListener('click', handleNewSelection);
+
+function handleNewSelection(){
+  localStorage.setItem('appState', 'newUser');
+  window.location.assign('choices.html');
+}

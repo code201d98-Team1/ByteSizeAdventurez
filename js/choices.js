@@ -178,10 +178,11 @@ function showQuestion(iQ,name) {
         debugger;
         let index = parseInt(appState);
         let name = document.getElementById('nameInput').value;
-        if(true){//appState === 'newUser'){ // captures new user if appState is new user
+        if(appState === 'newUser'){ // captures new user if appState is new user
           const profile = new Profiles(name, color, animal, number);
           profileArray.push(profile);
           console.log(profileArray);
+          localStorage.setItem('appState', (profileArray.length - 1));
         }else if (index>= 0){
           console.log(profileArray);
           profileArray[index].name = name;
@@ -189,10 +190,10 @@ function showQuestion(iQ,name) {
           profileArray[index].animal = animal;
           profileArray[index].number = number;
         }
-        debugger;
+        // debugger;
         let profileArrayString = JSON.stringify(profileArray);
         console.log(profileArrayString);
-        debugger;
+        // debugger;
         localStorage.setItem('profileArray', profileArrayString);
         window.location.href = 'home.html';
 

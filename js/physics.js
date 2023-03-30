@@ -1,6 +1,25 @@
 // Write or Adjust your JavaScript code here.
 'use strict';
 
+function loadAppState() {
+  let appState = parseInt(localStorage.getItem('appState'));
+  return appState;
+}
+
+function loadUserProfile() {
+  const profileArray = JSON.parse(localStorage.getItem('profileArray')) || [];
+  let appState = localStorage.getItem('appState');
+  let profile;
+  if (appState && appState !== 'newUser') {
+    const index = parseInt(appState);
+    profile = profileArray[index];
+  }
+  return profile;
+}
+
+const profile = loadUserProfile();
+const index = loadAppState();
+
 let theCanvas = document.getElementById('theCanvas');
 let theContext = theCanvas.getContext('2d');
 let canvasExplosion = document.getElementById('canvasExplosion');
@@ -56,6 +75,11 @@ function throwProjectile() {
   x = xo; // position at t=0
   y = yo; // position at t=0
   moveProjectile();
+  profile.timesPlayedPhysics++;
+  const profileArray = JSON.parse(localStorage.getItem('profileArray')) || [];
+  profileArray[index] = profile;
+  localStorage.setItem('profileArray', JSON.stringify(profileArray));
+  console.log(profileArray);
 }
 
 function drawProjectile() {
@@ -131,5 +155,3 @@ function switchEndEffect(){
   img.setAttribute('width', '60');
   endEffectEl.appendChild(img);
 }
-
-

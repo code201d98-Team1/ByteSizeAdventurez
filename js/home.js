@@ -1,3 +1,5 @@
+'use strict';
+
 // Load user profile from storage
 
 function loadUserProfile() {
