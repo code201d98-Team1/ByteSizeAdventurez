@@ -20,10 +20,16 @@
   </div>           -->
 <body class="splash-body">
     <header>
-        <video width="640" height="360" autoplay loop id="introVideo">
+        <div id="Video">
+        <video width="640" height="360" autoplay loop controls aria-controls="video-player" id="my-video">
             <source src="assets/indexVideo.mp4" type="video/mp4">
             <img src="assets/ByteSizeAdventures.png" alt="Byte Size Adventurez Logo">
+             <script>
+                var video = document.getElementById("my-video");
+                video.controlsList = "nodownload"; // disable download button
+              </script>
         </video>
+        </div>
     </header>
     <main>
         <!-- <section>

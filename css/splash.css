@@ -10,11 +10,40 @@ html,
 /* Gradient Animaiton */
 
 .splash-body {
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background: linear-gradient(-45deg, #A1C2EF, #145da0, #D9DCFF, #7F73E3, #F5A374, #FDC11D );
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
   font-family: 'ABeeZee';
   font-weight: bolder;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+
+#Video {
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: center;
+  order: 0;
+}
+
+.splash-body video {
+  border-radius: 20px;
+}
+
+video::-webkit-media-controls {
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+video:hover::-webkit-media-controls {
+  opacity: 1;
 }
 
 @keyframes gradient {
@@ -33,10 +62,17 @@ html,
 
 /* Button */
 
-/* .text-box {
-  margin-left: 44vw;
-  margin-top: 42vh;
-} */
+.text-box {
+  /* margin-left: 44vw;
+  margin-top: 42vh; */
+  margin-top: 10px;
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+}
 
 .btn:link,
 .btn:visited {
@@ -47,7 +83,7 @@ html,
   display: inline-block;
   border-radius: 100px;
   transition: all .2s;
-  position: absolute;
+  position: relative;
 }
 
 .btn:hover {
