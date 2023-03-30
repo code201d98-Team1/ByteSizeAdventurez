@@ -162,6 +162,8 @@ function showQuestion(iQ,name) {
   container.innerHTML = `<h2>${question.title}</h2>`;
 
   question.choices.forEach((choice) => {
+    console.log(document.getElementById(choice).cloneNode(true));
+    // debugger;
     const image = document.getElementById(choice).cloneNode(true);
     image.style.display = 'inline-block'; // Show the image
     image.onclick = () => {
