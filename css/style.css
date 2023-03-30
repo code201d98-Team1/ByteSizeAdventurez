@@ -204,12 +204,16 @@ h4{
 .about-us-header>div>ul>li:first-child{
     font-size: 50px;
     display: inline-block;
-    
     margin-top: 20px;
+    color: aliceblue;
+}
+
+.backbutton{
+    transition: .5s;
 }
 
 .backbutton:hover{
-    transition: 20ms ease-in-out;
+    transform: translateY(-5px);
 }
 
 
@@ -271,7 +275,18 @@ h4{
 }
 
 .email:hover{
-    color:#243e5a;
+    color: #3586ff;
+}
+
+.companylogo{
+    margin-top: .8em;
+    margin-right: 2px;
+    margin-left: 2px;
+    transition: 0.5s;
+}
+
+.companylogo:hover{
+    transform: translateY(-5px);
 }
 
 .logo{
