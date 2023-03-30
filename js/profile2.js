@@ -32,11 +32,11 @@ function handleProfileSelection(e){
   // debugger;
   let profileIndex = parseInt(outEvent.srcElement.parentElement.id);//profileArray.findIndex(x => x.name ===name);
   console.log(profileIndex);
-  debugger;
+  // debugger;
 
   //// this if statement prevents an invalide profileIndex to be entered. invalid profiles occurs when you do not click on the h2 element, but around it.
   if(profileIndex !== -1){
-    debugger;
+    // debugger;
     localStorage.setItem('appState', profileIndex);
     window.location.assign('home.html');
   }
