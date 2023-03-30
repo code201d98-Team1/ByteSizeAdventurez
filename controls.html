@@ -5,30 +5,29 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Parental Controls</title>
-        <link rel="stylesheet" href="/css/reset.css">
-        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/controls.css">
 </head>
-<body>
+<body class="controls-body">
     <header>
         <nav>
             <section>
-                <a href="home.html"><img src="assets/backbutton.png"></a>
+                <a href="home.html"><img src="assets/homebutton.png" alt="go to home page"></a>
             </section>
         </nav>
     </header>
     <main>
         <section>
             <h2>Parental Controls</h2>
-            <a href="profile.html">
-                <button>Change User</button>
+            <a href="profile.html" class="text-box">
+                <button class="btn btn-white btn-animate">Change User</button>
             </a>
-            <section id="deleteData">
-                <label for="delete-data"></label>
-                <input type="button" id="delete-data" value="Clear All Data">
+            <section id="deleteData" >
+            <label for="delete-data" class="text-box"></label>
+                <input type="button" id="delete-data" class="btn btn-white btn-animate" value="Clear All Data">
             </section>
         </section>
         <section>
-            <h2>Progress Report for User Profiles</h2>
             <section>
                 <canvas id="myChart"></canvas>
             </section>
