@@ -193,8 +193,9 @@ h4{
 }
 
 .about-us-header {
-    background-color: #243e5a;
+    background-color: #a1c2ef;
     height: 100px;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 .about-us-header>div>ul>li:first-child{
@@ -244,7 +245,7 @@ h4{
 }
 
 .self-photo{
-    height: 100px;
+    height: 110px;
     clip-path: circle();
     margin: 0 auto;
 }
@@ -266,12 +267,12 @@ h4{
     display: block;
     text-decoration: none;
     font-weight: bold;
-    color:#243e5a;
+    color:#a1c2ef;
     transition: 350ms all;
 }
 
 .email:hover{
-    color: #3586ff;
+    color: #1452a0;
 }
 
 .companylogo{

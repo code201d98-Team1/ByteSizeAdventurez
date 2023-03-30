@@ -26,6 +26,13 @@ html,
     }
 }
 
+.homebutton{
+  transition: .5s;
+}
+
+.homebutton:hover{
+  transform: translateY(-5px);
+}
 
 /* buttons! */
 
