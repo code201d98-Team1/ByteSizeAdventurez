@@ -53,7 +53,7 @@ function clearData(event){
   if (response){
     localStorage.clear();
     alert('Data has been erased!');
-    window.location.replace('splash.html');
+    window.location.replace('index.html');
   }
   else {
     alert('Data was not deleted.');
