@@ -21,6 +21,8 @@ function loadUserProfile() {
 const profile = loadUserProfile();
 const index = loadAppState();
 
+
+
 // console.log('Name:', profile.kidName);
 // console.log('Color:', profile.color);
 // console.log('Animal:', profile.animal);
