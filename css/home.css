@@ -16,50 +16,76 @@ nav {
     /* grid-template-columns: auto auto;
     grid-template-rows: auto auto;
     gap: 50px 100px; */
-    padding: 10px;
 }
 
 #homeDisplay {
     width: 100%;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     padding: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
 }
 
 #homeDisplay img {
-    height: 150px;
+    height: 200px;
     padding: 10px;
 }
 
 #nameDisplay {
     color: white;
-    padding: 10px;
     font-family: 'ABeeZee', sans-serif;
+    text-align: center;
+    font-size: 42px;
+    text-shadow: black 1px 0 10px;
 }
 
 #animal-facts {
-    background-color: white;
+    color: black;
+    font-family: 'ABeeZee', sans-serif;
     text-align: center;
+    font-size: 36px;
+    text-shadow: black 1px 0 10px;
 }
 
 .home_thumbnails {
     /* background-color: lightblue; */
-    display: grid;
-    row-gap: 10px;
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    width: 100%;
+    row-gap: 10px;
+    max-width: 100%;
 }
 
 
 #img1 {
-    background-color: white;
+    background-color: lightsalmon;
     width: 30%;
     margin: 20px;
     padding: 40px;
+    clip-path: circle();
+    margin: 0 auto;
 }
 
+
 #img2 {
-    background-color: white;
+    background-color: lightcoral;
     width: 30%;
     margin: 20px;
     padding: 40px;
+    clip-path: circle();
+    margin: 0 auto;
+}
+
+#img1:hover{
+    background-color: white;
+}
+
+#img2:hover{
+    background-color: white;
+}
+
+#numberImage {
+    filter: brightness(20%)
 }
