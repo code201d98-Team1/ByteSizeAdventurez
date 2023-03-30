@@ -3,8 +3,16 @@ body {
     display: flex;
     flex-flow: column;
     margin: auto;
-
+    font-family: 'ABeeZee';
+    font-weight: bolder;
+    color: white;
+    text-shadow: 0px 0px 4px rgb(32, 14, 0);
 }
+
+h1{
+    font-size: 25px;
+}
+
 
 .container {
     /* height: 1000px; */
@@ -174,4 +182,18 @@ top: 250px;
     background-color: #fdc11d;
     border-radius: 25px;
 }
+
+
+#canvasObjectThrown img{
+        animation: rotation 2s infinite linear;
+    }
+    
+    @keyframes rotation {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
 

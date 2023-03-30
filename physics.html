@@ -11,7 +11,7 @@
     <script type="text/javascript" src="lib/control/iconselect.js"></script>
     <script type="text/javascript" src="lib/iscroll.js"></script>
     <script src="js/physics_menu.js"></script>
-    <title>PHYSICS - NEED CREATIVE TITLE</title>
+    <title>Learning Physics</title>
 </head>
 
 
@@ -21,7 +21,7 @@
         <nav>
             <a href="home.html"><img src="assets/backbutton.png" alt="back button"></a>
         </nav>
-        <h1 style="text-align:center">What is Gravity??</h1>
+        <h1 style="text-align:center">Throw!</h1>
     </header>
     <main class="container">
         <div class="dropdown">
@@ -42,10 +42,10 @@
             </p> -->
         </div>
         <div class="throwArea" style="position: relative;">
-            <div id="canvasExplosion" style="position:absolute;">
+            <div id="canvasExplosion" style="position:absolute; left:20px; top:20px;">
                 <!-- <img src="img/explosion.png" width="60"> -->
             </div>
-            <div id="canvasObjectThrown" style="position:absolute;">
+            <div id="canvasObjectThrown" style="position:absolute; left:20px; top:20px;">
                 <!-- <img src="img/icons/1.png" width="60" style="-webkit-transform: scaleX(-1);transform: scaleX(-1);"> -->
             </div>
             <div id="backdropDiv">
@@ -105,7 +105,7 @@
                 </div>
                 <div class="slideContainer">
                     <input class="slider" type="range" id="gravitySlider" min="-30" max="30" step="0.1" value="9.8" oninput="showGravity();" onchange="showGravity();">
-                    <p>Gravity = <span id="gravityReadout">9.8</span>m</p>
+                    <p>Gravity = <span id="gravityReadout">9.8 </span> m/s^2</p>
                 </div>
                 <!-- <p>
                     <input type="range" id="xSlider" min="0" max="250" step="1" value="10" oninput="showPosition();"
@@ -113,7 +113,7 @@
                     Initial horizontal position = <span id="xReadout">10</span>m
                 </p> -->
                 
-                <p>This simulation demonstrates launching a projectile at various speeds and angles.</p>
+                <p id="infoParagraph">Gravity is set to Earth gravity right now</p>
             </div>
 
         </div>

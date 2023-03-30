@@ -47,7 +47,7 @@ let canvasObjectThrown = document.getElementById('canvasObjectThrown');
 // let ay = 9.81;        // grav. constant in SI units
 let dt = 0.2; // time step in seconds
 let t = 0; // initial time
-let timer, vel, yo, xo, a, angle, vx, vy, x, y, x_old, y_old, ay; // declare all motion variables
+let timer, vel, yo, xo, a, angle, vx, vy, x, y, x_old, y_old, ay,thrownImage; // declare all motion variables
 let speedSlider = document.getElementById('speedSlider');
 let angleSlider = document.getElementById('angleSlider');
 let heightSlider = document.getElementById('heightSlider');
@@ -58,6 +58,8 @@ let angleReadout = document.getElementById('angleReadout');
 let heightReadout = document.getElementById('heightReadout');
 // let xReadout = document.getElementById('xReadout');
 let gravityReadout = document.getElementById('gravityReadout');
+// let thrownImage = document.getElementById('#thrownImage');
+let explosionImage = document.querySelector('#canvasExplosion img');
 let test = 0;
 
 // moveProjectile();
@@ -72,7 +74,9 @@ showGravity();
 // function is called in HTML element for the Throw button
 function throwProjectile() {
   switchCharacter();
-  switchEndEffect()
+  switchEndEffect();
+  // debugger;
+  
   canvasExplosion.style = 'position:absolute; z-index: -1;';
   // canvasObjectThrown.style = `position:absolute; z-index: -1;`
   if (timer) {
@@ -111,6 +115,7 @@ function drawProjectile() {
 }
 
 function moveProjectile() {
+  let thrownImage = document.getElementById('thrownImage');
   if (y < 488 && x < 735) {
     t += dt;
     y_old = y;
@@ -123,12 +128,16 @@ function moveProjectile() {
     timer = window.setTimeout(moveProjectile, 100 * dt); // The number 100 can be increased for slow motion
     canvasObjectThrown.style = `position:absolute; left: ${x-32}px; top: ${y-40}px; z-index: 1;`;
     // console.log(` X = ${x} \n Y = ${y} \n Xo = ${xo} \n Yo = ${yo} \n X_old = ${x_old} \n Y_old = ${y_old} \n Vx = ${vx} \n Vy = ${vy} \n Gravity = ${ay} \n Time = ${t} \n test =  ${test} `)
+    thrownImage.style =`animation: rotation ${30/vel}s infinite linear;`;
   } else if (x >= 735) { // RIGHT BORDER
     console.log('HIT');
-    canvasObjectThrown.style = 'position:absolute; z-index: -1;';
+    canvasObjectThrown.style = 'position:absolute; z-index: -1; left:20px; top:20px;';
     canvasExplosion.style = `position:absolute; left: ${x-32}px; top: ${y-40}px; z-index: 1;`;
   } else if (y >= 488) { // BOTTOM BORDER
     console.log('Miss');
+    // thrownImage.style ='animation: rotation 0.8s;';
+    // debugger;
+    console.log(thrownImage);
   }
 }
 
@@ -146,8 +155,25 @@ function showAngle() {
 // }
 function showGravity() {
   gravityReadout.innerHTML = gravitySlider.value;
-}
+  let value = gravitySlider.value;
+  let gravityParagraph = document.getElementById('infoParagraph');
+  if(value < -1){
+    gravityParagraph.innerHTML = 'YOU ARE FLYING!!';
+  } else if(value >= -1 && value <1){
+    gravityParagraph.innerHTML = 'This is how space feels.';
+  } else if(value >= 1 && value <2.5){
+    gravityParagraph.innerHTML = "Houston.... we're on the MOON";
+  } else if(value >= 2.5 && value <7){
+    gravityParagraph.innerHTML = 'You just stepped foot on MARS';
+  } else if(value >= 7 && value <12){
+    gravityParagraph.innerHTML = "You are on Earth. Don't stay here too long";
+  } else if(value >= 12 && value <20){
+    gravityParagraph.innerHTML = "Are things getting heavy or is it just me?";
+  } else {
+    gravityParagraph.innerHTML = "JUPITER?? Can you throw very far?";
+  }
 
+}
 //END OF PHYSICS FUNCTIONS
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -158,6 +184,7 @@ function switchCharacter(){
   let targetElement = document.querySelector('div#my-character-select.icon-select div.icon.selected img');
   let characterID = parseInt(targetElement.id);
   console.log(targetElement.id);
+  img.setAttribute('id','thrownImage');
   img.setAttribute('src', `img/icons/${characterID}.png`);
   img.setAttribute('width', '60');
   characterEl.appendChild(img);
@@ -171,6 +198,7 @@ function switchEndEffect(){
   let targetElement = document.querySelector('div#my-endEffect-select.icon-select div.icon.selected img');
   let endEffectID = parseInt(targetElement.id);
   console.log(targetElement.id);
+  img.setAttribute('id','explodeImg');
   img.setAttribute('src', `img/icons/${endEffectID}.png`);
   img.setAttribute('width', '60');
   endEffectEl.appendChild(img);
