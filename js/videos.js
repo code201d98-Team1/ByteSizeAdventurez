@@ -87,8 +87,9 @@ imageElements.forEach((imageElement) => {
       videoPlayer.src = video.src;
       videoPlayer.play();
       videoPlayerContainer.style.display = 'block';
-      index.timesVideoWatched += 1;
-      localStorage.setItem('profileArray', JSON.stringify(profileArray));
+      profile.timesVideoWatched += 1;
+      // localStorage.setItem('profileArray', JSON.stringify(profileArray));
+      console.log(profile);
     }
   });
 });
