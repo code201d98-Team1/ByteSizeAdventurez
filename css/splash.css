@@ -63,6 +63,9 @@ video:hover::-webkit-media-controls {
 /* Button */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e98ecb0f034cde394a99e036cfb83de9ea0a8d03
 .text-box {
   /* margin-left: 44vw;
   margin-top: 42vh; */
@@ -74,12 +77,15 @@ video:hover::-webkit-media-controls {
   align-self: auto;
   order: 0;
 }
+<<<<<<< HEAD
 =======
 /* .text-box {
   margin-left: 44vw;
   margin-top: 42vh;
 } */
 >>>>>>> 754204a2c4bbce7ab2244b58730c3ad79a899b3d
+=======
+>>>>>>> e98ecb0f034cde394a99e036cfb83de9ea0a8d03
 
 .btn:link,
 .btn:visited {
