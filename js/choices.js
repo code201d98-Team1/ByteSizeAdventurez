@@ -175,7 +175,7 @@ function showQuestion(iQ,name) {
         const animal = selectedChoices[0];
         const color = selectedChoices[1];
         const number = selectedChoices[2];
-        debugger;
+        // debugger;
         let index = parseInt(appState);
         let name = document.getElementById('nameInput').value;
         if(appState === 'newUser'){ // captures new user if appState is new user

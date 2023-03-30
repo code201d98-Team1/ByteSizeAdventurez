@@ -2,9 +2,24 @@
 
 // Load user profile
 
-const loadProfileArray = JSON.parse(localStorage.getItem('profileArray'));
+function loadAppState() {
+  let appState = parseInt(localStorage.getItem('appState'));
+  return appState;
+}
 
-const profile = loadProfileArray[0];
+function loadUserProfile() {
+  const profileArray = JSON.parse(localStorage.getItem('profileArray')) || [];
+  let appState = localStorage.getItem('appState');
+  let profile;
+  if (appState && appState !== 'newUser') {
+    const index = parseInt(appState);
+    profile = profileArray[index];
+  }
+  return profile;
+}
+
+const profile = loadUserProfile();
+const index = loadAppState();
 
 console.log('Name:', profile.kidName);
 console.log('Color:', profile.color);
@@ -77,9 +92,11 @@ imageElements.forEach((imageElement) => {
       videoPlayer.src = video.src;
       videoPlayer.play();
       videoPlayerContainer.style.display = 'block';
-      profile.timesVideoWatched += 1;
-      // localStorage.setItem('profileArray', JSON.stringify(profileArray));
-      console.log(profile);
+      profile.timesVideoWatched++;
+      const profileArray = JSON.parse(localStorage.getItem('profileArray')) || [];
+      profileArray[index] = profile;
+      localStorage.setItem('profileArray', JSON.stringify(profileArray));
+      console.log(profileArray);
     }
   });
 });
