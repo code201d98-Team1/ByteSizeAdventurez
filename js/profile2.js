@@ -1,4 +1,4 @@
-'use strict';
+// 'use strict';
 
 const profileArray = JSON.parse(localStorage.getItem('profileArray')) || []; // checking if read item is null
 
