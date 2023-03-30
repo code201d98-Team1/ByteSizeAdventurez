@@ -82,7 +82,7 @@ body {
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    background: #04AA6D;
+    background: #fdc11d;
     cursor: pointer;
 }
 
@@ -90,7 +90,7 @@ body {
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    background: #04AA6D;
+    background: #fdc11d;
     cursor: pointer;
 }
 
@@ -121,7 +121,7 @@ body {
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    background: #04AA6D;
+    background: #fdc11d;
     cursor: pointer;
 }
 
@@ -129,7 +129,7 @@ body {
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    background: #04AA6D;
+    background: #fdc11d;
     cursor: pointer;
 }
 
@@ -150,3 +150,16 @@ body {
     width: 750;
     margin-bottom: 25px;
 }
+
+.throwButton{
+    background-color: #fdc11d96;
+    border-color: #fdc11d;
+    border-radius: 25px;
+    margin-bottom: 20px;
+}
+
+.throwButton:hover{
+    background-color: #fdc11d;
+    border-radius: 25px;
+}
+
