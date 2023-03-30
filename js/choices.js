@@ -134,7 +134,7 @@ const questions = [
   },
   {
     title: 'What is your favorite color?',
-    choices: ['red', 'blue', 'green'],
+    choices: ['purple', 'blue', 'green'],
   },
   {
     title: 'What is your favorite number?',
