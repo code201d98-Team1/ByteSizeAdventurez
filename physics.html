@@ -121,11 +121,15 @@
 
     <footer>
         <div class="audio-container">
-        <audio controls autoplay>
+        <audio controls autoplay id="physicsAudio">
             <source src="assets/pikiwinterprocrastination.mp3" type="audio/mpeg">
             <source src="assets/pikioceantour.mp3" type="audio/mpeg">
             <source src="assets/pikianewday.mp3" type="audio/mpeg">
             Your browser does not support the audio element.
+            <script>
+                var audio = document.getElementById('physicsAudio');
+                audio.volume = 0.1;
+            </script>
           </audio>
         </div>
     </footer>
