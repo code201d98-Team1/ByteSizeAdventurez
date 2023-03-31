@@ -136,7 +136,7 @@ function startQuestions() {
   let x=1;
   const name = document.getElementById('nameInput').value;
   console.log(name);
-  debugger;
+  // debugger;
   localStorage.setItem('name', name); // testing for integrating profile array contruct
   //  const name = document.getElementById('nameInput').value;
 
