@@ -214,4 +214,8 @@ html,
   font-weight: bolder;
 }
   
-  
+h2 {
+  font-family: 'ABeeZee';
+  text-align: center;
+  font-size: 42px;
+}

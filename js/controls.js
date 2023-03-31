@@ -57,6 +57,7 @@ function drawChart(){
 Chart.defaults.font.weight = 'bold';
 Chart.defaults.color = 'black';
 Chart.defaults.font.size = 30;
+Chart.defaults.font.family = 'ABeeZee';
 drawChart();
 
 
