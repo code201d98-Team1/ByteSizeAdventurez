@@ -29,6 +29,7 @@ html,
 
 .homebutton{
   transition: .5s;
+  margin-left: 15px;
 }
 
 .homebutton:hover{

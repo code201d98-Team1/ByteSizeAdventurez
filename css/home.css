@@ -93,6 +93,7 @@ nav {
 
 .backbutton{
     transition: .5s;
+    margin-left: 15px;
 }
 
 .backbutton:hover{
