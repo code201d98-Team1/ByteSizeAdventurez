@@ -127,29 +127,18 @@ Profiles.prototype.timesPlayedPhysics = function() {
 };
 
 
-const questions = [
-  {
-    title: 'What is your favorite animal?',
-    choices: ['jaguar', 'monkey', 'octopus'],
-  },
-  {
-    title: 'What is your favorite color?',
-    choices: ['purple', 'blue', 'green'],
-  },
-  {
-    title: 'What is your favorite number?',
-    choices: ['1', '2', '3', '4', '5', '6', '7', '8', '9'],
-  },
-];
+
 
 let currentQuestion = 0;
 let selectedChoices = [];
 // const profileArray = JSON.parse(localStorage.getItem('profileArray')) || [];
 function startQuestions() {
-  // const name = document.getElementById('nameInput').value;
-  // console.log(name);
+  let x=1;
+  const name = document.getElementById('nameInput').value;
+  console.log(name);
   // debugger;
-  // // localStorage.setItem('name', name); // testing for integrating profile array contruct
+  localStorage.setItem('name', name); // testing for integrating profile array contruct
+  //  const name = document.getElementById('nameInput').value;
 
   const questionsContainer = document.getElementById('questions');
   questionsContainer.style.display = 'block';
@@ -157,11 +146,31 @@ function startQuestions() {
 }
 
 function showQuestion(iQ) {
+  const name = localStorage.getItem('name');
+  const questions = [
+    {
+      title: `Hi ${name}, what is your favorite animal?`,
+      choices: ['jaguar', 'monkey', 'octopus'],
+    },
+    {
+      title: 'What is your favorite color?',
+      choices: ['purple', 'blue', 'green'],
+    },
+    {
+      title: 'What is your favorite number?',
+      choices: ['1', '2', '3', '4', '5', '6', '7', '8', '9'],
+    },
+  ];
   const question = questions[iQ];
+  const nameFieldDiv = document.getElementById('nameFieldDiv');
+  nameFieldDiv.innerHTML='';
   const container = document.getElementById('questions');
   container.innerHTML = `<h2>${question.title}</h2>`;
-
+  const containerH1 = document.getElementById('firstQ');
+  containerH1.innerHTML = '';
+  
   question.choices.forEach((choice) => {
+   
     console.log(document.getElementById(choice).cloneNode(true));
     // debugger;
     const image = document.getElementById(choice).cloneNode(true);
@@ -173,13 +182,13 @@ function showQuestion(iQ) {
         showQuestion(currentQuestion);
       } else {
         // localStorage.setItem('choices', JSON.stringify(selectedChoices));
-        // const name = localStorage.getItem('name');
+        const name = localStorage.getItem('name');
         const animal = selectedChoices[0];
         const color = selectedChoices[1];
         const number = selectedChoices[2];
         // debugger;
         let index = parseInt(appState);
-        let name = document.getElementById('nameInput').value;
+        // let name = document.getElementById('nameInput').value;
         if(appState === 'newUser'){ // captures new user if appState is new user
           const profile = new Profiles(name, color, animal, number);
           profileArray.push(profile);
@@ -197,6 +206,7 @@ function showQuestion(iQ) {
         console.log(profileArrayString);
         // debugger;
         localStorage.setItem('profileArray', profileArrayString);
+        localStorage.removeItem('name');
         window.location.href = 'home.html';
 
         // let profile = new Profiles(name, animal, color, number);
