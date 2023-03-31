@@ -10,13 +10,29 @@
 </head>
 <body class="profile-body">
     <header>
+        <!-- <div class="hero-box">
+            <img class="hero-image" src="assets/ByteSizeAdventures.png" alt="Byte Size Adventurez Logo">
+        </div> -->
         <div class="hero-box">
-        <img class="hero-image" src="assets/ByteSizeAdventures.png" alt="Byte Size Adventurez Logo">
-    </div>
+            <video width="640" height="360" autoplay loop controls aria-controls="video-player" id="my-video">
+                <source src="assets/indexVideo.mp4" type="video/mp4">
+                <img src="assets/ByteSizeAdventures.png" alt="Byte Size Adventurez Logo">
+                <script>
+                    var video = document.getElementById("my-video");
+                    video.controlsList = "nodownload"; // disable download button
+                    video.volume = 0.4;
+                    window.addEventListener('load', playVideo);
+                    function playVideo() {
+                        const videoPlayer = document.querySelector('#video-player');
+                        videoPlayer.play();
+                    }
+                </script>
+            </video>
+        </div>
     </header>
     <main>
         <section>
-            <p>Welcome back to Byte Size Adventurez! Select your child's profile or create a new one!</p>
+            <p>Welcome to Byte Size Adventurez! Select your child's profile or create a new one!</p>
         <!-- Profile Selection Form, Will Probably need JS to add more profiles -->
         <form id="profile-form">
             <!-- <label for="prof1"></label>

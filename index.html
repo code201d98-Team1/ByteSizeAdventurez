@@ -17,24 +17,24 @@
         <div class="circle medium shade4"></div>
         <div class="circle small shade5"></div>
     </div>           -->
-    <body class="splash-body">
-        <header>
-            <div id="Video">
-                <video width="640" height="360" autoplay muted loop controls aria-controls="video-player" id="my-video">
-                    <source src="assets/indexVideo.mp4" type="video/mp4">
-                    <img src="assets/ByteSizeAdventures.png" alt="Byte Size Adventurez Logo">
-                    <script>
-                        var video = document.getElementById("my-video");
-                        video.controlsList = "nodownload"; // disable download button
-                        window.addEventListener('load', playVideo);
-                        function playVideo() {
-                            const videoPlayer = document.querySelector('#video-player');
-                            videoPlayer.play();
-                        }
-                        </script>
-        </video>
-    </div>
-</header>
+<body class="splash-body">
+    <header>
+        <div id="Video">
+            <video width="640" height="360" autoplay muted loop controls aria-controls="video-player" id="my-video">
+                <source src="assets/indexVideo.mp4" type="video/mp4">
+                <img src="assets/ByteSizeAdventures.png" alt="Byte Size Adventurez Logo">
+                <script>
+                    var video = document.getElementById("my-video");
+                    video.controlsList = "nodownload"; // disable download button
+                    window.addEventListener('load', playVideo);
+                    function playVideo() {
+                        const videoPlayer = document.querySelector('#video-player');
+                        videoPlayer.play();
+                    }
+                </script>
+            </video>
+        </div>
+    </header>
 <main>
     <!-- <section>
         <p>Welcome to the Byte Sized Adventurez application! The design of this application was for use by parents and their children. The parent should help their child create a profile, after which they will be taken to a set of activities designed to entertain & educate.</p>
@@ -47,14 +47,6 @@
 </main>
 <footer id="splash-footer">
     <!-- <a href="about.html"><button>About Us, Byte Sized Adventurez</button></a> -->
-    <audio autoplay controls="true" controlsList="nodownload" id="autoAudio">
-        <source src="assets/indexSong.mp3" type="audio/mp3">
-        Your browser does not suppor the audio tag.
-        <script>
-            var audio = document.getElementById("autoAudio");
-            audio.volume = 0.3;
-        </script>
-    </audio>
 </footer>
 </body>
 </html>
