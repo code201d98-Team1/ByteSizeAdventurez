@@ -48,7 +48,7 @@ html,
 video::-webkit-media-controls {
   opacity: 0;
   transition: opacity 0.2s ease-in-out;
-}
+}gi
 
 video:hover::-webkit-media-controls {
   opacity: 1;
