@@ -31,7 +31,11 @@ function handleProfileSelection(e){
   let outEvent = e;
   console.log(outEvent);
   // debugger;
-  let profileIndex = parseInt(outEvent.srcElement.parentElement.id);//profileArray.findIndex(x => x.name ===name);
+  let profileHeader = outEvent.srcElement.parentElement.id;//profileArray.findIndex(x => x.name ===name);
+  let profileIndex = parseInt(profileHeader);
+  if(profileHeader === 'profileContainer'){
+    profileIndex = parseInt(outEvent.target.id);
+  }
   console.log(profileIndex);
   // debugger;
 
