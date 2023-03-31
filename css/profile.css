@@ -19,6 +19,8 @@ html,
 
 .profile-card{
     transition: .5s;
+    background-color: white;
+
 }
 
 .profile-card:hover{
@@ -157,22 +159,32 @@ a:hover::after{
   position: absolute;
 }
 
-.btn:hover {
+.profile-card{
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 10px 15px;
+  margin: 0px 5px;
+  font-size: 20px;
+  border-radius: 100px;
+  transition: all .2s;
+}
+
+.btn:hover, .profile-card:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.btn:active {
+.btn:active, .profile-card:active {
   transform: translateY(-1px);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-.btn-white {
+.btn-white, .profile-card {
   background-color: #fff;
   color: #777;
 }
 
-.btn::after {
+.btn::after, .profile-card::after {
   content: "";
   display: inline-block;
   height: 100%;
@@ -189,13 +201,13 @@ a:hover::after{
   background-color: #fff;
 }
 
-.btn:hover::after {
+.btn:hover::after, .profile-card:hover::after {
   transform: scaleX(1.4) scaleY(1.6);
   opacity: 0;
 }
 
-.btn-animate {
-  animation: moveInBottom 5s ease-out;
+.btn-animate, .profile-card {
+  animation: moveInBottom 1.5s ease-out;
   animation-fill-mode: backwards;
 }
 
@@ -210,3 +222,4 @@ a:hover::after{
     transform: translateY(0px);
   }
 }
+
