@@ -23,9 +23,11 @@
 
 | Version | Updates |
 | ------- | :------ |
-| Version 1.0.2 |   Updated project documentation with software requirements, PM board link, wireframes, and data schema.  | 
-| Version 1.0.1 |   Changed name to Byte Size Adventurez along with Org name. Updated the README to include the about section for the app. Created a development branch and locked down the main branch. | 
-|Version 1.0.0 | Creation of project/app repository and added MD file for team agreement which includes links to all project tools | 
+| Version 1.4 FINAL |   Fixed image pathing issue to CSS wave image in about page. Fixed white space issue under border in about page. Published into main branch and re-published active page.  | 
+| Version 1.3 |   CSS styling applied across all pages. Fixed image population issue on choice page and home page. Minor bugs addressed.  | 
+| Version 1.2 |   Fixed local storage issues and refactored code in several places to fit with the schema. Fixed video page looping issue. Updated splash page with animation. Fixed button pathing issues. Added mathematical check for parental controls page. Added additional functionality to physics game.  | 
+| Version 1.1 |   Changed name to Byte Size Adventurez along with Org name. Updated the README to include the about section for the app. Created a development branch and locked down the main branch. Created all index files and CSS pages for project. Preliminary run on primary JS files including choices, physics, videos and masterpageload. Preliminary run on CSS styling. Configured default styling for website layout. | 
+|Version 1.0 | Creation of project/app repository and added MD file for team agreement which includes links to all project tools | 
 
 ## Database Schema Diagram
 

@@ -182,6 +182,8 @@ h4{
 .about-html {
     background-color: #fff;
     height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .about-us{
@@ -190,6 +192,9 @@ h4{
     background-color: white;
     /* height: 100vh; */
     margin: 0;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    min-height: 100%;
 }
 
 .about-us-header {
@@ -226,10 +231,10 @@ h4{
 
 .mission{
     display: inline-block;
-    margin-top: 30px;
+    margin-top: auto;
     line-height: 1.8em;
     font-size: 16px;
-    /* margin-bottom: 20px; */
+    margin-bottom: 35px;
     padding:30px;
 }
 .about-us main{
@@ -243,6 +248,7 @@ h4{
     justify-content: center;
     align-items: center;
     align-content: space-around;
+    margin-bottom: 60px;
 }
 
 .about-us-section p {
@@ -361,9 +367,10 @@ h4{
 
 h3{
     font-size: 30px;
-    margin-bottom: 25px;
+    margin-bottom: 35px;
     font-weight: bold;
 }
+
 
 .footer {
     position: relative;
