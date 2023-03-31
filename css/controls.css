@@ -165,10 +165,10 @@ html,
   transition: all .4s;
 }
 
-.btn:hover::after {
+/* .btn:hover::after {
   transform: scaleX(1.4) scaleY(1.6);
   opacity: 0;
-}
+} */
 
 /* .btn-white::after {
   background-color: #fff;
@@ -218,4 +218,8 @@ h2 {
   font-family: 'ABeeZee';
   text-align: center;
   font-size: 42px;
+}
+
+#myChart{
+  margin-top: 100px;
 }
