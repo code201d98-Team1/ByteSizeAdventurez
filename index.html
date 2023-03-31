@@ -1,52 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/splash.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=ABeeZee">
-    <title>Welcome to Byte Size Adventures!</title>
-</head>
-<!-- <div class="ripple-background">
-    <div class="circle xxlarge shade1"></div>
-    <div class="circle xlarge shade2"></div>
-    <div class="circle large shade3"></div>
-    <div class="circle medium shade4"></div>
-    <div class="circle small shade5"></div>
-  </div>           -->
-<body class="splash-body">
-    <header>
-        <div id="Video">
-        <video width="640" height="360" autoplay loop controls aria-controls="video-player" id="my-video">
-            <source src="assets/indexVideo.mp4" type="video/mp4">
-            <img src="assets/ByteSizeAdventures.png" alt="Byte Size Adventurez Logo">
-             <script>
-                var video = document.getElementById("my-video");
-                video.controlsList = "nodownload"; // disable download button
-                window.addEventListener('load', playVideo);
-                function playVideo() {
-                const videoPlayer = document.querySelector('#video-player');
-                videoPlayer.play();
-                }
-              </script>
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/splash.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=ABeeZee">
+        <title>Welcome to Byte Size Adventures!</title>
+    </head>
+    <!-- <div class="ripple-background">
+        <div class="circle xxlarge shade1"></div>
+        <div class="circle xlarge shade2"></div>
+        <div class="circle large shade3"></div>
+        <div class="circle medium shade4"></div>
+        <div class="circle small shade5"></div>
+    </div>           -->
+    <body class="splash-body">
+        <header>
+            <div id="Video">
+                <video width="640" height="360" autoplay muted loop controls aria-controls="video-player" id="my-video">
+                    <source src="assets/indexVideo.mp4" type="video/mp4">
+                    <img src="assets/ByteSizeAdventures.png" alt="Byte Size Adventurez Logo">
+                    <script>
+                        var video = document.getElementById("my-video");
+                        video.controlsList = "nodownload"; // disable download button
+                        window.addEventListener('load', playVideo);
+                        function playVideo() {
+                            const videoPlayer = document.querySelector('#video-player');
+                            videoPlayer.play();
+                        }
+                        </script>
         </video>
-        </div>
-    </header>
-    <main>
-        <!-- <section>
-            <p>Welcome to the Byte Sized Adventurez application! The design of this application was for use by parents and their children. The parent should help their child create a profile, after which they will be taken to a set of activities designed to entertain & educate.</p>
-        </section> -->
+    </div>
+</header>
+<main>
+    <!-- <section>
+        <p>Welcome to the Byte Sized Adventurez application! The design of this application was for use by parents and their children. The parent should help their child create a profile, after which they will be taken to a set of activities designed to entertain & educate.</p>
+    </section> -->
         <section>
             <div class="text-box">
             <a href="profile.html" class="btn btn-white btn-animate" >Click Here to Enter!</a>
         </div>
-        </section>
-    </main>
-    <footer>
-        <!-- <a href="about.html"><button>About Us, Byte Sized Adventurez</button></a> -->
-    </footer>
+    </section>
+</main>
+<footer id="splash-footer">
+    <!-- <a href="about.html"><button>About Us, Byte Sized Adventurez</button></a> -->
+    <audio autoplay controls="true" controlsList="nodownload" id="autoAudio" >
+        <source src="assets/indexSong.mp3" type="audio/mp3">
+        Your browser does not suppor the audio tag.
+        <script>
+            var audio = document.getElementById("autoAudio");
+            audio.volume = 0.3;
+        </script>
+    </audio>
+</footer>
 </body>
 </html>
