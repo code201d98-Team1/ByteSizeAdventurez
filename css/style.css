@@ -229,7 +229,7 @@ h4{
     margin-top: 30px;
     line-height: 1.8em;
     font-size: 16px;
-    margin-bottom: 50px;
+    /* margin-bottom: 20px; */
     padding:30px;
 }
 .about-us main{
@@ -246,16 +246,16 @@ h4{
 }
 
 .about-us-section p {
-    width: 200px;
-    align-content: center;
-    padding: 20px;
+    width: 300px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
     
 #bioSectionContain {
     display: grid; 
     grid-template-columns: repeat(2, auto); 
     grid-template-rows: repeat(2, auto); 
-    gap: 20px 20px; 
+    gap: 20px 50px; 
     padding: 30px;
 }
 
@@ -285,7 +285,7 @@ h4{
     flex-grow: 0;
     flex-shrink: 1;
     /* flex-basis: 25%; */
-    align-self: flex-start;
+    align-self: center;
     order: 0;
 }
 
@@ -294,14 +294,23 @@ h4{
     clip-path: circle();
     margin: 0;
     width: 90px; */
-    width: 100%;
+    width: 90px;
     height: 90px;
     clip-path: circle();
+    margin-right: 10px;
 }
 
 .bio-div{
-    display: inline-block;
-    align-items: center;
+    /* display: inline-block;
+    align-items: flex-start; */
+    display: flex;
+    
+    justify-content: space-evenly; 
+    align-items: flex-start; 
+    /* flex-flow: column nowrap; */ 
+    flex-direction: column; 
+    flex-wrap: nowrap; 
+    align-content: space-around;
 }
 
 .bio-div p{
@@ -330,6 +339,12 @@ h4{
     margin-right: 2px;
     margin-left: 2px;
     transition: 0.5s;
+}
+
+.logoContain {
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
 }
 
 .companylogo:hover{
