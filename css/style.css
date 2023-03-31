@@ -249,13 +249,14 @@ h4{
     width: 300px;
     padding-top: 5px;
     padding-bottom: 5px;
+    line-height: 1.5;
 }
     
 #bioSectionContain {
     display: grid; 
     grid-template-columns: repeat(2, auto); 
     grid-template-rows: repeat(2, auto); 
-    gap: 20px 50px; 
+    gap: 0px 50px; 
     padding: 30px;
 }
 
