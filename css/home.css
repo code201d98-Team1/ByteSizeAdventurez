@@ -89,3 +89,11 @@ nav {
 #numberImage {
     filter: brightness(20%)
 }
+
+.backbutton{
+    transition: .5s;
+}
+
+.backbutton:hover{
+    transform: translateY(-5px);
+}
