@@ -1,16 +1,23 @@
-
 body {
     display: flex;
     flex-flow: column;
     margin: auto;
-
+    font-family: 'ABeeZee';
+    font-weight: bolder;
+    color: white;
+    text-shadow: 0px 0px 4px rgb(32, 14, 0);
 }
+
+h1 {
+    font-size: 25px;
+}
+
 
 .container {
     /* height: 1000px; */
     /* width: 750px; */
     margin: auto;
-    
+
 }
 
 .container {
@@ -146,10 +153,10 @@ body {
     width: 30px;
 }
 
-.sliderVertical{
-position: absolute;
-left:-250px;
-top: 250px;
+.sliderVertical {
+    position: absolute;
+    left: -250px;
+    top: 250px;
 }
 
 
@@ -157,21 +164,49 @@ top: 250px;
     transform: rotate(90deg);
 }
 
-.throwArea{
+.throwArea {
     height: 500px;
     width: 750;
     margin-bottom: 25px;
 }
 
-.throwButton{
+.throwButton {
     background-color: #fdc11d96;
     border-color: #fdc11d;
     border-radius: 25px;
     margin-bottom: 20px;
 }
 
-.throwButton:hover{
+.throwButton:hover {
     background-color: #fdc11d;
     border-radius: 25px;
 }
 
+
+#canvasObjectThrown img {
+    animation: rotation 2s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.audio-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.backbutton{
+    transition: .4s;
+}
+
+.backbutton:hover{
+    transform: translateY(-5px);
+}

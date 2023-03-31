@@ -24,13 +24,13 @@ function drawChart(){
       datasets: [{
         label: 'Times Videos Watched',
         data: timesVideo,
-        borderWidth: 3,
-        backgroundColor: 'darkred',
+        borderWidth: 2,
+        backgroundColor: 'rgb(20, 93, 160, 0.5',
       },{
         label: 'Times Physics Game Played',
         data: timesPhysics,
-        borderWidth: 3,
-        backgroundColor: 'darkblue',
+        borderWidth: 2,
+        backgroundColor: 'rgb(253, 193, 29, 0.5',
       }]
     },
     options: {
@@ -57,6 +57,7 @@ function drawChart(){
 Chart.defaults.font.weight = 'bold';
 Chart.defaults.color = 'black';
 Chart.defaults.font.size = 30;
+Chart.defaults.font.family = 'ABeeZee';
 drawChart();
 
 

@@ -17,5 +17,5 @@ let bodyElement = document.querySelector('body'); //here for testing only
 /////////sample code to test appState CSS selection
 
 console.log(appState);
-bodyElement.style.backgroundColor = profileArray[index].color;
+// bodyElement.style.backgroundColor = profileArray[index].color;
 

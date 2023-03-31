@@ -6,10 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="home.html">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/choices.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=ABeeZee">
     <title>Profile choices</title>
 </head>
 
-<body> 
+<body class="controls-body"> 
     <!--Page 3, Kid Choice-->
 
     <!--Name Input-->
@@ -30,9 +33,11 @@
     </div> -->
 
 
-    <h1>What's your name?</h1>
-    <input type="text" id="nameInput">
-    <button onclick="startQuestions()">Submit</button>
+    <h1 id="firstQ">What's your name?</h1>
+    <div id="nameFieldDiv">
+        <input type="text" id="nameInput">
+        <button class="btn" onclick="startQuestions()">CLICK</button>
+    </div>
 
     <div id="questions" style="display: none;">
         <!-- Questions will be generated here -->
@@ -46,15 +51,15 @@
         <img id="purple" src="assets/color3_purple.png">
         <img id="blue" src="assets/color2_blue.png">
         <img id="green" src="assets/color1_green.png">
-        <img id="1" src="assets/1.png">
-        <img id="2" src="assets/2.png">
-        <img id="3" src="assets/3.png">
-        <img id="4" src="assets/4.png">
-        <img id="5" src="assets/5.png">
-        <img id="6" src="assets/6.png">
-        <img id="7" src="assets/7.png">
-        <img id="8" src="assets/8.png">
-        <img id="9" src="assets/9.png">
+        <img class='imageNumber' id="1" src="assets/1.png">
+        <img class='imageNumber' id="2" src="assets/2.png">
+        <img class='imageNumber' id="3" src="assets/3.png">
+        <img class='imageNumber' id="4" src="assets/4.png">
+        <img class='imageNumber' id="5" src="assets/5.png">
+        <img class='imageNumber' id="6" src="assets/6.png">
+        <img class='imageNumber' id="7" src="assets/7.png">
+        <img class='imageNumber' id="8" src="assets/8.png">
+        <img class='imageNumber' id="9" src="assets/9.png">
     </div>
 
     <!--Question Choice Boxes-->

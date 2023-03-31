@@ -10,19 +10,39 @@
 </head>
 <body class="profile-body">
     <header>
-        <img src="assets/ByteSizeAdventures.png" alt="Byte Size Adventurez Logo">
+        <!-- <div class="hero-box">
+            <img class="hero-image" src="assets/ByteSizeAdventures.png" alt="Byte Size Adventurez Logo">
+        </div> -->
+        <div class="hero-box">
+            <video width="640" height="360" autoplay loop controls aria-controls="video-player" id="my-video">
+                <source src="assets/indexVideo.mp4" type="video/mp4">
+                <img src="assets/ByteSizeAdventures.png" alt="Byte Size Adventurez Logo">
+                <script>
+                    var video = document.getElementById("my-video");
+                    video.controlsList = "nodownload"; // disable download button
+                    video.volume = 0.4;
+                    window.addEventListener('load', playVideo);
+                    function playVideo() {
+                        const videoPlayer = document.querySelector('#video-player');
+                        videoPlayer.play();
+                    }
+                </script>
+            </video>
+        </div>
     </header>
     <main>
         <section>
-            <p>Welcome back to Byte Size Adventurez! Select your child's profile or create a new one!</p>
+            <p>Welcome to Byte Size Adventurez! Select your child's profile or create a new one!</p>
         <!-- Profile Selection Form, Will Probably need JS to add more profiles -->
         <form id="profile-form">
             <!-- <label for="prof1"></label>
             <input type="button" id="prof1" value=""> -->
             <div id="profileContainer"></div>
         </form>
-            <a href="choices.html"><button id="newProfileButton">Click here to make create a new profile!</button></a>
-            <div class="text-box">
+        <div id="button 1">
+            <a href="choices.html"><class="btn btn-white btn-animate" id="newProfileButton">Click here to make create a new profile!</a>
+        </div>
+            <div id="button2" class="text-box">
                 <a href="about.html" class="btn btn-white btn-animate" >About Byte Size Adventurez</a>
             </div>
         </section>

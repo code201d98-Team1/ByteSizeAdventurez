@@ -17,6 +17,24 @@ html,
   font-weight: bolder;
 }
 
+.profile-card{
+    transition: .5s;
+}
+
+.profile-card:hover{
+    /* background-color: rgba(0, 0, 0, 0.1); */
+    cursor: pointer;
+    transform: translateY(-5px);
+}
+
+.backbutton{
+    transition: .5s;
+}
+
+.backbutton:hover{
+    transform: translateY(-5px);
+}
+
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
@@ -31,12 +49,101 @@ html,
   }
 }
 
+.hero-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.hero-image{
+    border-radius: 50%;
+}
+
+p{
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 80px;
+}
+
+#profileContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+h2{
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
 /* Button */
 
 /* .text-box {
   margin-left: 44vw;
   margin-top: 42vh;
 } */
+
+div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+a{
+    margin-top: 200px;
+    padding-bottom: 50px;
+    background-color: #fff;
+    color: #777;
+    animation: moveInBottom 5s ease-out;
+    animation-fill-mode: backwards;
+}
+
+a:link, a:visited{
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 18px 50px;
+    font-size: 20px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+    position: absolute;
+}
+
+a:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+a:active{
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+a::after{
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+    background-color: #fff;
+}
+
+a:hover::after{
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+#button2{
+    margin-top: 100px;
+}
 
 .btn:link,
 .btn:visited {

@@ -138,7 +138,7 @@ function setBackground() {
     bodyElement.style.backgroundColor = 'white';
   }
   bodyElement.style.backgroundSize = 'cover';
-  bodyElement.style.backgroundRepeat = 'no-repeat';
+  bodyElement.style.backgroundRepeat = 'repeat';
   bodyElement.style.backgroundPosition = 'center center';
 }
 
