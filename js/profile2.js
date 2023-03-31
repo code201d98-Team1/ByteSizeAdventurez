@@ -13,6 +13,7 @@ let appState = localStorage.getItem('appState');
 for (let i in profileArray){
   const profileCard = document.createElement('div');
   profileCard.setAttribute('id',i);
+  profileCard.classList.add('profile-card');
   const profileDisplayName = document.createElement('h2');
   profileDisplayName.innerHTML = profileArray[i].name;
   console.log(profileArray);

@@ -17,6 +17,24 @@ html,
   font-weight: bolder;
 }
 
+.profile-card{
+    transition: .5s;
+}
+
+.profile-card:hover{
+    /* background-color: rgba(0, 0, 0, 0.1); */
+    cursor: pointer;
+    transform: translateY(-5px);
+}
+
+.backbutton{
+    transition: .5s;
+}
+
+.backbutton:hover{
+    transform: translateY(-5px);
+}
+
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
