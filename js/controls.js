@@ -67,7 +67,8 @@ resetDataEl.addEventListener('click', clearData);
 function clearData(event){
   const response = confirm('Are you sure you want to clear all data?');
   if (response){
-    localStorage.clear();
+    localStorage.removeItem('profileArray');
+    localStorage.removeItem('appState');
     alert('Data has been erased!');
     window.location.replace('index.html');
   }

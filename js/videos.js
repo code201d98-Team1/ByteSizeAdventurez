@@ -128,6 +128,13 @@ function setBackground() {
   loadUserProfile();
   loadAppState();
   const bodyElement = document.querySelector('html');
+  try {
+    profile.color;
+  }
+  catch(err){
+    alert('There is an error with the local data. Please make a new profile.');
+    window.location.assign('profile.html');
+  }
   if (profile.color === 'blue') {
     bodyElement.style.backgroundImage = 'url("assets/backgroundBlue.png")';
   } else if (profile.color === 'green') {
