@@ -126,11 +126,19 @@ if (profile) {
 
 // creation of facts for homepage
 const animalFacts = document.getElementById('animal-facts');
-let chosenAnimal = profile.animal; // needs to pull kid's animal choice
+let chosenAnimal;
+try {
+  chosenAnimal = profile.animal; // needs to pull kid's animal choice
+}
+catch(err) {
+  alert('There is an error with the local data. Please make a new profile.');
+  window.location.assign('profile.html');
+}
+
 
 function getRandomNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1) ) + min;
-};
+}
 
 let factNumber = getRandomNumber(0, 2);
 
