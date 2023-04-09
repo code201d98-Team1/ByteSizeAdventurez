@@ -23,9 +23,7 @@ for (let i in profileArray){
 }
 //waiting to click on the name, it doesnt work if we dont click the name.
 profileContainer.addEventListener('click', handleProfileSelection);
-// newProfileButton.addEventListener('click',);
 function handleProfileSelection(e){
-//   console.log(e.target.innerHTML);
 ////////////CODE IS SUPPOSE TO IDENTIFY WHAT h2 WAS CLICKED, THEN PARSE THROUGH THE PROFILEARRAY FOR INDEX OF NAME
   let name = e.target.innerHTML;
   let outEvent = e;
