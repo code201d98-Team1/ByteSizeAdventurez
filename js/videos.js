@@ -22,33 +22,6 @@ const profile = loadUserProfile();
 const index = loadAppState();
 
 
-
-// console.log('Name:', profile.kidName);
-// console.log('Color:', profile.color);
-// console.log('Animal:', profile.animal);
-// console.log('Number:', profile.number);
-// console.log('Video:', profile.timesVideoWatched);
-// console.log('Game:', profile.timesPlayedPhysics);
-
-
-
-// //profile construct function
-// function Profiles(kidName, color, animal, number){
-//   this.kidName = kidName;
-//   this.color = color;
-//   this.animal = animal;
-//   this.number = number;
-//   this.timesVideoWatched = 0;
-//   this.timesPlayedPhysics = 0;
-// }
-
-// //method called when a video is watched
-// Profiles.prototype.timesVideoWatched = function() {
-//   this.timesVideoWatched += 1;
-// };
-
-// let profile = new Profiles('John', 'blue', 'jaguar', 7, 0, 0);
-
 // TODO: load customized css based on profile color choice
 
 // Retrieve image and video player elements

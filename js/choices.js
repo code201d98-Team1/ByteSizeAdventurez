@@ -1,109 +1,5 @@
 // 'use strict';
 
-// let kidName;
-// let animal;
-// let color;
-// let number;
-
-// function Profiles(kidName, color, animal, number) {
-//   this.kidName = kidName;
-//   this.color = color;
-//   this.animal = animal;
-//   this.number = number;
-//   this.timesVideoWatched = 0;
-//   this.timesPlayedPhysics = 0;
-// }
-
-// function startQuestions() {
-
-
-
-//     kidName = document.getElementById("name").value;
-
-//     document.getElementById("choiceDisplay").style.display = "none";
-//     document.getElementById("questionBox1").style.display = "block";
-// }
-
-// function chooseAnimal() {
-//     animal = chosenAnimal;
-
-//     document.getElementById("questionBox1").style.display = "none";
-//     document.getElementById("questionBox2").style.display = "block";
-// }
-
-// function chooseColor(chosenColor) {
-//     color = chosenColor;
-
-//     document.getElementById("questionBox2").style.display = "none";
-//     document.getElementById("questionBox3").style.display = "block";
-// }
-
-
-// // Choose number and then show choices on Home Page
-
-
-// function chooseNumber(chosenNumber) {
-//     number = chosenNumber;
-
-//     document.getElementById("questionBox3").style.display = "none";
-//     document.getElementById("homeDisplay").style.display = "block";
-
-//     localStorage.setItem('name', kidName);
-//     localStorage.setItem('animal', animal);
-//     localStorage.setItem('color', color);
-//     localStorage.setItem('number', number);
-
-//     window.location.href = "home.html";
-
-//     // Show choices on Home Page
-
-//     document.getElementById("nameDisplay").innerHTML = "Hi " + kidName + "!";
-//     let choicesEl = document.getElementById("choices");
-
-//     // Animal Selection
-
-//     let animalImg = document.createElement("img");
-//     animalImg.src = animal + ".png";
-//     //might need to change the image suffix depending on the image type
-//     animalImg.alt = animal;
-//     let animalText = document.createTextNode("Your favorite animal is a " + animal + "!");
-//     let animalEl = document.createElement("div");
-//     animalEl.appendChild(animalImg);
-//     animalEl.appendChild(animalText);
-//     choicesEl.appendChild(animalEl);
-
-//     // Color Selection
-
-//     let colorImg = document.createElement("img");
-//     colorImg.src = color + ".png";
-//     //might need to change the image suffix depending on the image type
-//     colorImg.alt = color;
-//     let colorText = document.createTextNode("Your favorite color is " + color + "!");
-//     let colorEl = document.createElement("div");
-//     colorEl.appendChild(colorImg);
-//     colorEl.appendChild(colorText);
-//     choicesEl.appendChild(colorEl);
-
-//     // Number Selection
-
-
-//     let numberImg = document.createElement("img");
-//     numberImg.src = number + ".png";
-//     //might need to change the image suffix depending on the image type
-//     numberImg.alt = number;
-//     let numberText = document.createTextNode("Your favorite number is " + number + "!");
-//     let numberEl = document.createElement("div");
-//     numberEl.appendChild(numberImg);
-//     numberEl.appendChild(numberText);
-//     choicesEl.appendChild(numberEl);
-
-
-
-// let profile = new Profiles(kidName, animal, color, number);
-
-
-// let profileStringify = JSON.stringify(profile);
-// localStorage.setItem(this.name, profileStringify);
 
 
 //profile construct function
@@ -131,15 +27,12 @@ Profiles.prototype.timesPlayedPhysics = function() {
 
 let currentQuestion = 0;
 let selectedChoices = [];
-// const profileArray = JSON.parse(localStorage.getItem('profileArray')) || [];
 function startQuestions() {
-  let x=1;
+  // let x=1;
   const name = document.getElementById('nameInput').value;
   console.log(name);
   // debugger;
-  localStorage.setItem('name', name); // testing for integrating profile array contruct
-  //  const name = document.getElementById('nameInput').value;
-
+  localStorage.setItem('name', name); // testing for integrating profile array contruc
   const questionsContainer = document.getElementById('questions');
   questionsContainer.style.display = 'block';
   showQuestion(currentQuestion);
@@ -168,9 +61,9 @@ function showQuestion(iQ) {
   container.innerHTML = `<h2>${question.title}</h2>`;
   const containerH1 = document.getElementById('firstQ');
   containerH1.innerHTML = '';
-  
+
   question.choices.forEach((choice) => {
-   
+
     console.log(document.getElementById(choice).cloneNode(true));
     // debugger;
     const image = document.getElementById(choice).cloneNode(true);
@@ -181,14 +74,17 @@ function showQuestion(iQ) {
         currentQuestion++;
         showQuestion(currentQuestion);
       } else {
-        // localStorage.setItem('choices', JSON.stringify(selectedChoices));
         const name = localStorage.getItem('name');
         const animal = selectedChoices[0];
         const color = selectedChoices[1];
         const number = selectedChoices[2];
         // debugger;
-        let index = parseInt(appState);
-        // let name = document.getElementById('nameInput').value;
+        let index;
+        let appState =  localStorage.getItem('appState') || []; // 0 is parting out weird. Zero (0) the number is over written by null, unidentified, and empty array, but string '0' is not.
+        if(parseInt(appState)>= 0){ // this will turn all number strings to actual number variables. 
+          index = parseInt(appState); // index should only be created when appState is equal to a profile number, not newUser or parentMenu
+        }
+        const profileArray = JSON.parse(localStorage.getItem('profileArray')) || [];
         if(appState === 'newUser'){ // captures new user if appState is new user
           const profile = new Profiles(name, color, animal, number);
           profileArray.push(profile);
@@ -208,15 +104,11 @@ function showQuestion(iQ) {
         localStorage.setItem('profileArray', profileArrayString);
         localStorage.removeItem('name');
         window.location.href = 'home.html';
-
-        // let profile = new Profiles(name, animal, color, number);
-        // let profileStringify = JSON.stringify(profile);
-        // localStorage.setItem(name, profileStringify);
       }
     };
     container.appendChild(image);
   });
-  
+
 }
 
 // Populate the home page with the user's choices

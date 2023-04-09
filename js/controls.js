@@ -1,8 +1,6 @@
 'use strict';
 
 
-// test array
-// const profileArray = [{kidName : 'John', color : 'red', animal : 'Tiger', number: 5, timesVideoWatched : 0, timesPlayedPhysics: 0},{kidName : 'Alice', color : 'blue', animal : 'bear', number: 3, timesVideoWatched : 2, timesPlayedPhysics: 6},{kidName : 'Bob', color : 'green', animal : 'bird', number: 3, timesVideoWatched : 1, timesPlayedPhysics: 36}];
 
 const progressChart = document.getElementById('myChart');
 const profileArray = JSON.parse(localStorage.getItem('profileArray')) || [];
@@ -55,7 +53,7 @@ function drawChart(){
 }
 
 Chart.defaults.font.weight = 'bold';
-Chart.defaults.color = 'black';
+Chart.defaults.color = 'white';
 Chart.defaults.font.size = 30;
 Chart.defaults.font.family = 'ABeeZee';
 drawChart();
@@ -67,8 +65,7 @@ resetDataEl.addEventListener('click', clearData);
 function clearData(event){
   const response = confirm('Are you sure you want to clear all data?');
   if (response){
-    localStorage.removeItem('profileArray');
-    localStorage.removeItem('appState');
+    localStorage.clear();
     alert('Data has been erased!');
     window.location.replace('index.html');
   }

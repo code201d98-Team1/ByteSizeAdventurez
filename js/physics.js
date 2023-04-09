@@ -51,30 +51,19 @@ let theCanvas = document.getElementById('theCanvas');
 let theContext = theCanvas.getContext('2d');
 let canvasExplosion = document.getElementById('canvasExplosion');
 let canvasObjectThrown = document.getElementById('canvasObjectThrown');
-// let ay = 9.81;        // grav. constant in SI units
 let dt = 0.2; // time step in seconds
 let t = 0; // initial time
-let timer, vel, yo, xo, a, angle, vx, vy, x, y, x_old, y_old, ay,thrownImage; // declare all motion variables
+let timer, vel, yo, xo, a, angle, vx, vy, x, y, ay; // declare all motion variables
 let speedSlider = document.getElementById('speedSlider');
 let angleSlider = document.getElementById('angleSlider');
 let heightSlider = document.getElementById('heightSlider');
-// let xSlider = document.getElementById('xSlider');
 let gravitySlider = document.getElementById('gravitySlider');
 let speedReadout = document.getElementById('speedReadout');
 let angleReadout = document.getElementById('angleReadout');
-let heightReadout = document.getElementById('heightReadout');
-// let xReadout = document.getElementById('xReadout');
 let gravityReadout = document.getElementById('gravityReadout');
-// let thrownImage = document.getElementById('#thrownImage');
-let explosionImage = document.querySelector('#canvasExplosion img');
-let test = 0;
 
-// moveProjectile();
-// throwProjectile();
 showSpeed();
 showAngle();
-// showHeight(); DO NOT NEED TO DISPLAY HEIGHT VALUE TO KID
-// showPosition();
 showGravity();
 
 
@@ -85,7 +74,6 @@ function throwProjectile() {
   // debugger;
   
   canvasExplosion.style = 'position:absolute; z-index: -1;';
-  // canvasObjectThrown.style = `position:absolute; z-index: -1;`
   if (timer) {
     window.clearTimeout(timer);
     timer = null;
@@ -93,7 +81,6 @@ function throwProjectile() {
   x = 0;
   y = 0;
   t = 0;
-  test = 0; //added
   ay = Number(gravitySlider.value); //ADDED GRAVITY SLIDER
   vel = Number(speedSlider.value);
   a = Number(angleSlider.value);
@@ -125,16 +112,12 @@ function moveProjectile() {
   let thrownImage = document.getElementById('thrownImage');
   if (y < 488 && x < 735) {
     t += dt;
-    y_old = y;
-    x_old = x;
     x = xo + vx * t;
     y = yo - vy * t + .5 * ay * (t * t); // yo = - .5 * ay * (t * t) + vy * t + y
     drawProjectile();
-    // console.log('Y-Position' + y);
     if (timer) window.clearTimeout(timer);
     timer = window.setTimeout(moveProjectile, 100 * dt); // The number 100 can be increased for slow motion
     canvasObjectThrown.style = `position:absolute; left: ${x-32}px; top: ${y-40}px; z-index: 1;`;
-    // console.log(` X = ${x} \n Y = ${y} \n Xo = ${xo} \n Yo = ${yo} \n X_old = ${x_old} \n Y_old = ${y_old} \n Vx = ${vx} \n Vy = ${vy} \n Gravity = ${ay} \n Time = ${t} \n test =  ${test} `)
     thrownImage.style =`animation: rotation ${30/vel}s infinite linear;`;
   } else if (x >= 735) { // RIGHT BORDER
     console.log('HIT');
@@ -142,8 +125,6 @@ function moveProjectile() {
     canvasExplosion.style = `position:absolute; left: ${x-32}px; top: ${y-40}px; z-index: 1;`;
   } else if (y >= 488) { // BOTTOM BORDER
     console.log('Miss');
-    // thrownImage.style ='animation: rotation 0.8s;';
-    // debugger;
     console.log(thrownImage);
   }
 }
@@ -154,12 +135,7 @@ function showSpeed() {
 function showAngle() {
   angleReadout.innerHTML = angleSlider.value;
 }
-// function showHeight() {
-//   heightReadout.innerHTML = heightSlider.value;
-// }
-// function showPosition() {
-//   xReadout.innerHTML = xSlider.value;
-// }
+
 function showGravity() {
   gravityReadout.innerHTML = gravitySlider.value;
   let value = gravitySlider.value;

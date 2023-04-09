@@ -22,23 +22,7 @@ loadUserProfile();
 loadAppState();
 
 
-// Load user profile from storage
-
-// function loadUserProfile() {
-//   const profileArray = JSON.parse(localStorage.getItem('profileArray')) || [];
-//   const appState = localStorage.getItem('appState');
-//   let profile;
-
-//   if (appState && appState !== 'newUser') {
-//     const index = parseInt(appState);
-//     profile = profileArray[index];
-//   }
-
-//   return profile;
-// }
-
 // Get container element from DOM
-const homeDisplay = document.getElementById('homeDisplay');
 const nameDisplay = document.getElementById('nameDisplay');
 
 
